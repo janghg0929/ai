@@ -4,282 +4,3082 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#F7F7FB">
-  <title>AI Creative Agent Team — One idea, five deliverables</title>
+  <meta name="description" content="아이디어 한 줄로 발표자료, 포스터, 제안서, 웹페이지, 예산 분석까지. AI Creative Agent Team이 다섯 가지 결과물을 만듭니다.">
+  <title>AI Creative Agent Team | One idea, five deliverables.</title>
+
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap">
+  <script src="https://cdn.botframework.com/botframework-webchat/4.18.0/webchat.js"></script>
+
   <style>
-    :root{--ink:#14142B;--muted:#6B6B80;--line:rgba(20,20,43,.08);--paper:#F7F7FB;--brand:linear-gradient(120deg,#6E8BFF,#A77BFF 40%,#FF8AC8 70%,#FFB37A);--shadow:0 30px 80px -30px rgba(76,70,160,.25);--glass:rgba(255,255,255,.55)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font-family:'Pretendard Variable',Pretendard,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;word-break:keep-all;overflow-x:hidden}body:after{content:"";position:fixed;inset:0;z-index:20;pointer-events:none;opacity:.04;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E")}
-    a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,textarea:focus-visible{outline:3px solid #8B5CF6;outline-offset:3px}.wrap{width:min(1120px,calc(100% - 40px));margin-inline:auto}.serif{font-family:'Instrument Serif',Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-.025em}.gradient-text{background:linear-gradient(120deg,#4F6BFF,#8B5CF6 40%,#EC4899 70%,#FF7A45);-webkit-background-clip:text;background-clip:text;color:transparent}.mesh{background:radial-gradient(circle at 16% 18%,#8EA2FF 0 14%,transparent 32%),radial-gradient(circle at 78% 9%,#FFB3D9 0 13%,transparent 30%),radial-gradient(circle at 66% 62%,#FFD3A8 0 16%,transparent 34%),radial-gradient(circle at 25% 74%,#9BE3FF 0 15%,transparent 32%),radial-gradient(circle at 50% 32%,#C4A5FF 0 16%,transparent 36%),linear-gradient(135deg,#fff,#F5F0FF 40%,#FFF7F0);background-size:140% 140%;animation:mesh-drift 24s ease-in-out infinite alternate}.glass{background:rgba(255,255,255,.55);backdrop-filter:blur(24px) saturate(160%);-webkit-backdrop-filter:blur(24px) saturate(160%);border:1px solid rgba(255,255,255,.78);box-shadow:var(--shadow),inset 0 1px 1px rgba(255,255,255,.9)}.pill{border-radius:999px;white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;font-size:13px;font-weight:700;border:1px solid transparent}.pill-dark{background:var(--ink);color:white;box-shadow:0 8px 20px -12px #14142B;transition:transform .3s cubic-bezier(.2,1.3,.3,1),box-shadow .3s}.pill-dark:hover{transform:translateY(-2px);box-shadow:0 12px 25px -12px #14142B}.pill-glass{background:rgba(255,255,255,.55);border-color:rgba(255,255,255,.8)}
-    .nav{position:fixed;z-index:50;top:14px;left:50%;transform:translateX(-50%);width:min(1080px,calc(100% - 24px));height:58px;padding:8px 10px 8px 16px;display:flex;align-items:center;justify-content:space-between;border-radius:999px}.brand{display:flex;align-items:center;gap:10px;font-size:14px;font-weight:800;white-space:nowrap}.brand-mark{width:27px;height:27px;border-radius:50%;background:var(--brand);box-shadow:0 3px 12px #a77bff55;flex:none}.nav-links{display:flex;align-items:center;gap:28px;font-size:13px;color:#55556c}.nav-links a:hover{color:var(--ink)}.nav .pill{padding:11px 16px}
-    .hero{margin:94px 12px 0;border-radius:36px;position:relative;overflow:hidden;padding:25px 20px 20px;min-height:0;text-align:center;isolation:isolate}.hero:before,.cta-panel:before{content:"";position:absolute;inset:-15%;z-index:-1;background:radial-gradient(circle at 15% 30%,#8EA2FF88 0 12%,transparent 30%),radial-gradient(circle at 85% 15%,#FFB3D9aa 0 12%,transparent 29%),radial-gradient(circle at 70% 75%,#FFD3A8aa 0 14%,transparent 32%);animation:blob-float 22s ease-in-out infinite alternate}.hero-inner{position:relative;max-width:1000px;margin:auto}.hero-badge{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(255,255,255,.85);border-radius:999px;background:#ffffff8c;padding:8px 13px;font-size:11px;font-weight:700;color:#464663;box-shadow:0 8px 20px #7165aa12}.status-dot{width:7px;height:7px;border-radius:50%;background:#7665ec;box-shadow:0 0 0 4px #8b5cf619}.hero-kicker{margin:12px 0 5px;font-size:clamp(17px,2vw,21px);color:#514d72}.hero h1{font-size:clamp(40px,6vw,78px);line-height:1.08;letter-spacing:-.055em;font-weight:800;margin:7px auto 12px;max-width:920px;text-wrap:balance}.hero-copy{font-size:clamp(13px,1.5vw,16px);line-height:1.65;color:#45445f;margin:0 auto 18px;max-width:620px}.chat-card{width:min(860px,100%);margin:0 auto;border-radius:25px;overflow:hidden;text-align:left;display:flex;flex-direction:column;background:rgba(255,255,255,.72);backdrop-filter:blur(28px) saturate(160%);-webkit-backdrop-filter:blur(28px) saturate(160%);border:1px solid rgba(255,255,255,.9);box-shadow:0 28px 65px -36px rgba(60,48,130,.35),inset 0 1px #fff}.chat-card>*{flex:none}.window-bar{height:43px;display:flex;align-items:center;gap:10px;padding:0 14px;border-bottom:1px solid rgba(20,20,43,.06);min-width:0}.window-dots{display:flex;gap:4px;flex:none}.window-dots i{width:7px;height:7px;border-radius:50%;background:#d6d5df}.window-title{font-size:11px;font-weight:750;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.connection{display:flex;align-items:center;gap:5px;color:#8b8b9c;font-size:10px;white-space:nowrap}.connection i{width:6px;height:6px;background:#aaa;border-radius:50%}.is-connected .connection i{background:#24b47e;box-shadow:0 0 0 3px #24b47e18}.window-spacer{flex:1!important}.new-chat{border:1px solid #ffffff;border-radius:999px;background:#ffffff80;padding:6px 10px;font-size:10px;color:#55556b;white-space:nowrap}#webchat{height:200px;min-height:0;overflow-y:auto;overflow-x:hidden;padding:2px 13px}#webchat:empty:before{content:"안녕하세요! 아이디어 한 줄을 보내면 전문가 팀이 함께 작업해요.";display:block;color:#5c5b74;font-size:13px;line-height:1.7;padding:17px 12px;max-width:520px}.chat-foot{padding:7px 13px 12px;border-top:1px solid rgba(20,20,43,.05)}.example-row,.suggested-row{display:flex;gap:6px;overflow-x:auto;white-space:nowrap;scrollbar-width:none;padding:3px 0 7px}.example-row::-webkit-scrollbar,.suggested-row::-webkit-scrollbar,.marquee-track::-webkit-scrollbar{display:none}.example-chip,.suggest-chip{flex:none;border:1px solid rgba(255,255,255,.95);background:rgba(255,255,255,.64);border-radius:999px;padding:7px 10px;font-size:10px;color:#55536e;transition:transform .25s,background .25s}.example-chip:hover,.suggest-chip:hover{transform:translateY(-2px);background:white}.working-row{display:none;align-items:center;gap:8px;padding:7px 2px 10px;font-size:11px;color:#625b8c}.is-working .working-row{display:flex}.working-dots{display:flex;gap:4px}.working-dots i{width:5px;height:5px;border-radius:50%;background:#9b83f4;animation:dot-pulse 1s ease-in-out infinite}.working-dots i:nth-child(2){animation-delay:.12s}.working-dots i:nth-child(3){animation-delay:.24s}.working-dots i:nth-child(4){animation-delay:.36s}.working-dots i:nth-child(5){animation-delay:.48s}.working-note{color:#8b879e;font-size:10px;margin-left:auto}.suggested-row:empty{display:none}.suggested-row button{font-size:10px}.composer{position:relative;display:flex;align-items:flex-end;gap:8px;padding:8px 9px 8px 16px;border:1px solid rgba(255,255,255,.96);border-radius:23px;background:rgba(255,255,255,.83);box-shadow:0 8px 22px -18px #6255a0;transition:transform .3s cubic-bezier(.2,1.3,.3,1),box-shadow .3s;isolation:isolate}.composer:focus-within{transform:translateY(-2px);box-shadow:0 12px 28px -18px #6255a0}.composer textarea{position:relative;z-index:1;flex:1;min-width:0;resize:none;border:0;outline:none!important;background:transparent;color:var(--ink);padding:8px 0;line-height:1.45;font-size:13px;max-height:150px;min-height:28px}.composer textarea::placeholder{color:#9998aa}.send-btn{position:relative;z-index:1;width:36px;height:36px;flex:none;border:0;border-radius:50%;background:var(--ink);color:white;font-size:22px;line-height:1;display:grid;place-items:center;transition:opacity .2s,transform .2s}.send-btn:disabled{opacity:.22;cursor:not-allowed}.send-btn:not(:disabled):hover{transform:translateY(-2px)}.chat-note{font-size:9px;color:#9694a6;text-align:center;margin:8px 0 0}.connect-error{display:none;text-align:left;padding:20px 16px;color:#5d5a76;font-size:12px;line-height:1.6}.is-error .connect-error{display:block}.is-error .composer{display:none}.error-raw{display:block;margin-top:5px;font:10px ui-monospace,monospace;overflow-wrap:anywhere;color:#8a879b}.retry{margin-top:10px;border:1px solid #e4e0f4;background:#fff;border-radius:999px;padding:7px 12px;font-size:11px}.is-started .hero{min-height:0}.is-started .chat-card{height:calc(100svh - 112px);max-height:850px}.is-started .chat-card>#webchat{flex:1 1 0;height:auto;min-height:0}.is-started .hero{position:static}.is-started .hero-inner{max-width:100%}.is-started .hero-badge,.is-started .hero-kicker,.is-started .hero h1,.is-started .hero-copy{display:none}.is-started .hero{margin-top:88px;padding-top:12px;background:transparent;animation:none}.is-started .hero:before{display:none}.is-started .chat-card{margin-top:0}
-    .logo-strip{display:flex;justify-content:center;align-items:center;gap:clamp(14px,3vw,34px);flex-wrap:wrap;padding:20px 16px 10px;color:#77758e;font-size:10px;font-weight:650;letter-spacing:.01em}.logo-strip span{white-space:nowrap}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:55px 0 78px}.stat{border-right:1px solid var(--line);text-align:center}.stat:last-child{border:0}.stat-number{font-size:clamp(28px,4vw,43px);font-weight:800;letter-spacing:-.06em}.stat-label{font-size:12px;color:var(--muted);margin-top:7px}.section{padding:60px 0 90px;scroll-margin-top:96px}.section-head{text-align:center;margin:0 auto 38px;max-width:740px}.eyebrow{font-size:21px;color:#8b6bd7;margin:0 0 9px}.section-title{font-size:clamp(32px,4.2vw,56px);letter-spacing:-.05em;line-height:1.1;font-weight:800;text-wrap:balance;margin:0}.section-copy{font-size:15px;line-height:1.75;color:var(--muted);margin:15px auto 0;max-width:610px}.deliver-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px}.deliver-card{grid-column:span 2;min-width:0;border-radius:25px;background:rgba(255,255,255,.68);border:1px solid rgba(255,255,255,.95);box-shadow:0 14px 42px -35px #5e5295;overflow:hidden;padding:17px;transition:transform .4s cubic-bezier(.2,1.3,.3,1),box-shadow .3s}.deliver-card:nth-child(1),.deliver-card:nth-child(2){grid-column:span 3}.deliver-card:hover{transform:translateY(-5px);box-shadow:0 22px 42px -30px #7866bb}.mockup{height:150px;border-radius:17px;background:#f2f1fa;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;margin-bottom:18px}.deliver-card h3{font-size:20px;letter-spacing:-.04em;margin:0 0 7px;font-weight:800}.deliver-card p{font-size:12px;color:var(--muted);line-height:1.65;margin:0 0 15px;min-height:40px}.filename{font:11px ui-monospace,SFMono-Regular,Menlo,monospace;color:#6e60b7;background:#f1edff;padding:7px 9px;border-radius:8px;display:inline-flex;max-width:100%;overflow-wrap:anywhere}.slides{position:relative;width:190px;height:105px;transition:transform .4s}.slide{position:absolute;width:118px;height:82px;border-radius:8px;background:white;box-shadow:0 8px 22px #45405b20;border:1px solid #e9e6f6;padding:10px}.slide:before{content:"";display:block;width:55%;height:6px;border-radius:5px;background:#a69aff;margin:5px 0 8px}.slide:after{content:"";display:block;width:80%;height:3px;border-radius:4px;background:#e5e2f0;box-shadow:0 8px #e5e2f0,0 16px #e5e2f0}.slide.s1{left:4px;top:14px;transform:rotate(-12deg)}.slide.s2{left:36px;top:8px;transform:rotate(2deg)}.slide.s3{left:68px;top:15px;transform:rotate(12deg);background:linear-gradient(140deg,#fff,#f4edff)}.deliver-card:hover .slides{transform:translateY(-4px)}.poster{width:86px;height:124px;border-radius:7px;background:linear-gradient(155deg,#6b5bff,#d95fbd 60%,#ffb36b);box-shadow:0 12px 25px #6f4cb344;padding:15px 9px;color:white;transform:rotate(-4deg);transition:transform .4s}.poster:before{content:"IDEAS\A INTO\A IMPACT";white-space:pre;display:block;font-weight:850;font-size:16px;line-height:.98;letter-spacing:-.06em}.poster:after{content:"CREATIVE FEST · 2026";display:block;font-size:5px;letter-spacing:.08em;margin-top:14px}.deliver-card:hover .poster{transform:rotate(0) scale(1.04)}.doc{width:104px;height:125px;background:#fff;border-radius:7px;box-shadow:0 12px 25px #46405b1c;padding:15px 11px;position:relative;transition:transform .4s}.doc:before{content:"PROJECT\A PROPOSAL";white-space:pre;display:block;font-size:12px;font-weight:800;line-height:1.1;color:#3d5bd8;border-top:7px solid #a8b5ff;padding-top:11px;margin-bottom:13px}.doc:after{content:"";display:block;height:3px;background:#e4e5ec;box-shadow:0 7px #e4e5ec,0 14px #e4e5ec,0 21px #e4e5ec,0 35px #e4e5ec}.deliver-card:hover .doc{transform:translateY(-4px)}.browser{width:82%;height:118px;border-radius:10px;background:white;box-shadow:0 12px 25px #46405b1c;overflow:hidden;transition:transform .4s}.browser-top{height:19px;background:#f1eff8;display:flex;gap:4px;align-items:center;padding:0 8px}.browser-top i{width:5px;height:5px;background:#c7c2da;border-radius:50%}.browser-body{padding:10px;background:linear-gradient(130deg,#f8eaff,#e7edff);height:100%}.browser-nav{height:7px;width:90%;background:#ffffffb8;border-radius:5px;margin-bottom:12px}.browser-title{font-size:12px;font-weight:800;letter-spacing:-.04em;margin-bottom:8px}.browser-cta{background:#6b5bff;height:15px;width:58px;border-radius:5px;margin-top:10px}.deliver-card:hover .browser{transform:translateY(-3px)}.budget{width:85%;height:112px;background:#fff;border-radius:11px;padding:12px;box-shadow:0 12px 25px #46405b1c}.budget-value{font-size:20px;font-weight:800;letter-spacing:-.06em}.budget-label{font-size:8px;color:#9290a3}.bars{display:flex;align-items:flex-end;gap:8px;height:35px;margin-top:9px}.bars i{flex:1;display:block;border-radius:4px 4px 1px 1px;background:linear-gradient(#a89aff,#6e7eff);height:25%;transform-origin:bottom;transition:height .7s cubic-bezier(.2,1.3,.3,1)}.bars i:nth-child(2){height:45%}.bars i:nth-child(3){height:36%}.bars i:nth-child(4){height:72%}.bars i:nth-child(5){height:94%}.deliver-card:hover .bars i{height:var(--h)}
-    .how-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:center}.orbit-wrap{overflow:hidden;border-radius:28px;min-height:370px;display:grid;place-items:center;background:linear-gradient(145deg,#f0edff,#f9f5ff 55%,#fff0f7);border:1px solid white;position:relative}.orbit{--r:150px;position:relative;width:calc(var(--r)*2);aspect-ratio:1;margin:48px auto}.orbit-ring{position:absolute;inset:0;border-radius:50%;border:1px dashed rgba(20,20,43,.16);animation:orbit-spin 40s linear infinite}.orbit .agent{position:absolute;left:50%;top:50%;transform:rotate(var(--a)) translateX(var(--r)) rotate(calc(-1 * var(--a)))}.orbit .agent b{position:absolute;translate:-50% -50%;white-space:nowrap;padding:8px 12px;border-radius:999px;font:600 12px ui-monospace,SFMono-Regular,Menlo,monospace;color:#5B4BC4;background:rgba(255,255,255,.88);border:1px solid #fff;box-shadow:0 8px 20px #7c6db41c;animation:orbit-spin 40s linear infinite reverse}.orbit .leader{position:absolute;left:50%;top:50%;translate:-50% -50%;width:112px;aspect-ratio:1;border-radius:50%;display:grid;place-items:center;font-weight:800;background:rgba(255,255,255,.75);backdrop-filter:blur(18px);border:1px solid white;box-shadow:0 15px 45px #7b6cc32e}.steps{display:grid;gap:10px}.step{display:grid;grid-template-columns:42px 1fr;gap:14px;padding:18px;border:1px solid white;background:rgba(255,255,255,.62);border-radius:19px}.step-num{width:38px;height:38px;border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,#e8eaff,#fce9f6);color:#6d5bcb;font-weight:800}.step h3{font-size:15px;margin:1px 0 6px}.step p{font-size:12px;line-height:1.65;color:var(--muted);margin:0}
-    .design-band{padding:74px 0 82px;background:linear-gradient(115deg,#5B3DF5 0%,#bd4ce8 48%,#FF4FA3 74%,#FF9F45 100%);color:white;position:relative;overflow:hidden}.design-band:before{content:"";position:absolute;width:500px;height:500px;border-radius:50%;background:#ffd3f133;top:-300px;right:5%}.design-band .section-head{position:relative}.design-band .eyebrow{color:#fff9}.design-band .section-copy{color:#fffC}.theme-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;position:relative}.theme-card{border-radius:20px;background:#ffffff1e;border:1px solid #ffffff60;backdrop-filter:blur(18px);padding:16px 14px;min-width:0}.swatches{display:flex;gap:7px;margin-bottom:17px}.swatch{width:28px;height:28px;border-radius:50%;border:2px solid #ffffff8c;box-shadow:0 3px 10px #24144a18}.theme-card h3{font-size:14px;margin:0 0 6px}.theme-card p{font-size:11px;line-height:1.5;color:#fffD;margin:0}.prompts{overflow:hidden;padding:10px 0 22px}.marquee-track{display:flex;gap:9px;width:max-content;animation:marquee 42s linear infinite;margin-bottom:10px}.marquee-track.reverse{animation-direction:reverse;margin-left:-150px}.prompt-chip{border:1px solid rgba(255,255,255,.95);background:rgba(255,255,255,.68);backdrop-filter:blur(15px);border-radius:999px;padding:12px 16px;font-size:12px;color:#4d4969;white-space:nowrap;transition:transform .25s,background .25s}.prompt-chip:hover{transform:translateY(-3px);background:white}.cta-panel{position:relative;isolation:isolate;overflow:hidden;border-radius:34px;padding:76px 22px 80px;text-align:center;margin:30px 12px 56px}.cta-panel .eyebrow{margin-bottom:12px}.cta-panel h2{font-size:clamp(38px,6vw,76px);line-height:1.08;letter-spacing:-.055em;font-weight:800;margin:0 auto 25px;text-wrap:balance}.footer{padding:24px 0 35px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#858398;font-size:11px}.footer strong{color:#4c4a65}.floating-status{position:fixed;z-index:45;right:18px;bottom:18px;display:none;border-radius:999px;padding:12px 16px;font-size:12px;font-weight:700;cursor:pointer;box-shadow:0 12px 36px #5b4ba533}.is-working .floating-status,.has-result .floating-status{display:flex;align-items:center;gap:8px}.is-working .floating-status:before{content:"";width:7px;height:7px;border-radius:50%;background:#9b83f4;animation:dot-pulse 1s infinite}.has-result .floating-status:before{content:"↗"}.reveal-ready [data-reveal]{opacity:0;filter:blur(8px);transform:translateY(22px);transition:opacity .7s,filter .7s,transform .7s cubic-bezier(.2,1.3,.3,1)}.reveal-ready [data-reveal].revealed{opacity:1;filter:blur(0);transform:translateY(0)}
-    @keyframes orbit-spin{to{rotate:360deg}}@keyframes dot-pulse{0%,100%{opacity:.35;transform:scale(.8)}50%{opacity:1;transform:scale(1.15)}}@keyframes marquee{to{transform:translateX(-50%)}}@keyframes blob-float{to{transform:translate3d(2%,3%,0) scale(1.04)}}@keyframes mesh-drift{to{background-position:100% 40%}}@media(max-width:760px){.wrap{width:calc(100% - 32px)}.nav-links{display:none}.brand{font-size:12px;gap:7px}.brand-mark{width:23px;height:23px}.nav{height:52px}.hero{margin:80px 8px 0;border-radius:26px;padding:22px 12px 15px}.hero h1{font-size:clamp(38px,9vw,55px)}.hero-copy{max-width:420px;margin-bottom:14px}.chat-card{border-radius:21px}.window-bar{padding-inline:10px;gap:7px}.window-title{max-width:46vw;font-size:10px}.connection{font-size:9px}.new-chat{font-size:9px;padding:6px 8px}#webchat{height:190px;padding-inline:6px}.chat-foot{padding:6px 8px 10px}.example-chip{font-size:10px;padding:7px 9px}.chat-note{font-size:8px}.logo-strip{gap:12px;padding-top:17px;font-size:9px}.stats{padding:36px 0 52px;gap:8px}.stat-number{font-size:27px}.stat-label{font-size:10px}.section{padding:45px 0 65px}.section-head{margin-bottom:27px}.section-copy{font-size:13px}.deliver-grid{grid-template-columns:1fr;gap:12px}.deliver-card,.deliver-card:nth-child(1),.deliver-card:nth-child(2){grid-column:span 1;padding:14px}.mockup{height:135px;margin-bottom:14px}.deliver-card h3{font-size:18px}.deliver-card p{min-height:0}.how-grid{grid-template-columns:1fr;gap:20px}.orbit-wrap{min-height:300px}.orbit{--r:100px;margin:40px auto}.orbit .agent b{font-size:9px;padding:6px 8px}.orbit .leader{width:84px}.step{padding:14px}.design-band{padding:57px 0 60px}.theme-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.theme-card:last-child{grid-column:span 2}.theme-card{padding:14px}.cta-panel{margin:20px 8px 35px;padding:55px 15px 60px;border-radius:26px}.footer{font-size:10px}.floating-status{right:12px;bottom:12px;padding:11px 13px}.is-started .hero{margin:76px 8px 0;padding:6px 0 10px}.is-started .chat-card{height:calc(100svh - 100px)}}@media(max-width:390px){.nav{padding-left:11px}.brand{font-size:10.5px}.nav>.pill{padding:10px 12px;font-size:11px}.hero h1{font-size:37px}.hero-kicker{font-size:16px}.hero-badge{font-size:10px}.window-title{max-width:40vw}.connection{gap:3px}.stats{grid-template-columns:repeat(2,1fr);row-gap:20px}.stat:nth-child(2){border:0}.stat-number{font-size:30px}.theme-grid{gap:8px}.theme-card{padding:12px}.swatch{width:23px;height:23px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.reveal-ready [data-reveal]{opacity:1;filter:none;transform:none}}
-    /* Web Chat 기본 요소와 파일 카드 */
-    #webchat .webchat__typing-indicator{display:none!important}#webchat .webchat__stacked-layout:not(.webchat__stacked-layout--from-user) .webchat__stacked-layout__status{display:none}#webchat .webchat__stacked-layout__attachment-row{margin-top:8px!important}#webchat .webchat__stacked-layout__attachment,#webchat .webchat__stacked-layout__attachment .webchat__bubble__content{background:none!important;border:0!important;overflow:visible!important}#webchat .webchat__stacked-layout__content:has(.webchat__fileContent){overflow:visible!important}#webchat .webchat__fileContent{padding:0!important}#webchat .webchat__fileContent__buttonLink{display:flex!important;align-items:center;gap:12px;height:56px;padding:0 18px 0 12px;border-radius:18px;text-decoration:none;color:#14142B;background:rgba(255,255,255,.72);backdrop-filter:blur(24px) saturate(160%);border:1px solid rgba(255,255,255,.8);box-shadow:0 10px 24px -16px rgba(76,70,160,.3),inset 0 1px 1px #fff}#webchat .webchat__fileContent__buttonLink:before{content:"FILE";flex:none;padding:5px 8px;border-radius:999px;background:linear-gradient(120deg,#EEF0FF,#FBEFFF);color:#5B4BC4;font:600 10.5px/1 ui-monospace,monospace;letter-spacing:.04em}#webchat a[download$=".pptx" i]:before{content:"PPTX"}#webchat a[download$=".docx" i]:before{content:"DOCX"}#webchat a[download$=".xlsx" i]:before{content:"XLSX"}#webchat a[download$=".html" i]:before{content:"HTML"}#webchat .webchat__fileContent__badge{flex:1;min-width:0;background:none!important;padding:0!important}#webchat .webchat__fileContent__fileName{font:13px ui-monospace,SFMono-Regular,Menlo,monospace!important;color:#14142B!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}#webchat .webchat__fileContent__downloadIcon{flex:none;box-sizing:content-box;width:16px;height:16px;padding:0;fill:#6B6B80;color:#6B6B80}#webchat .webchat__render-markdown{word-break:keep-all;overflow-wrap:anywhere;line-height:1.7;color:#292840;font-size:13px}#webchat .webchat__render-markdown h1,#webchat .webchat__render-markdown h2,#webchat .webchat__render-markdown h3{letter-spacing:-.03em;line-height:1.3}#webchat .webchat__render-markdown table{display:block;max-width:100%;overflow-x:auto;border-collapse:collapse;border-spacing:0;margin:12px 0;font-variant-numeric:tabular-nums}#webchat .webchat__render-markdown th,#webchat .webchat__render-markdown td{padding:9px 18px 9px 0;border-bottom:1px solid rgba(20,20,43,.08);white-space:nowrap}#webchat .webchat__render-markdown th{font-size:12px;font-weight:600;color:#6B6B80}
+    :root {
+      --bg: #F7F7FB;
+      --ink: #14142B;
+      --muted: #6B6B80;
+      --line: rgba(20, 20, 43, .08);
+      --brand: linear-gradient(120deg, #6E8BFF, #A77BFF 40%, #FF8AC8 70%, #FFB37A);
+      --brand-text: linear-gradient(120deg, #4F6BFF, #8B5CF6 40%, #EC4899 70%, #FF7A45);
+      --glass: rgba(255, 255, 255, .55);
+      --glass-border: rgba(255, 255, 255, .75);
+      --shadow: 0 30px 80px -30px rgba(76, 70, 160, .25);
+      --spring: cubic-bezier(.2, 1.3, .3, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 96px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: "Pretendard Variable", Pretendard, -apple-system,
+        BlinkMacSystemFont, "Segoe UI", sans-serif;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: clip;
+    }
+
+    body::after {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      pointer-events: none;
+      opacity: .035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.65'/%3E%3C/svg%3E");
+    }
+
+    button,
+    textarea {
+      font: inherit;
+    }
+
+    button {
+      color: inherit;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button:focus-visible,
+    a:focus-visible,
+    textarea:focus-visible {
+      outline: 3px solid rgba(110, 139, 255, .7);
+      outline-offset: 4px;
+    }
+
+    button:disabled {
+      cursor: not-allowed;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .glass {
+      background: rgba(255, 255, 255, .55);
+      -webkit-backdrop-filter: blur(24px) saturate(160%);
+      backdrop-filter: blur(24px) saturate(160%);
+      border: 1px solid rgba(255, 255, 255, .75);
+      box-shadow: 0 30px 80px -30px rgba(76, 70, 160, .25),
+        inset 0 1px 1px rgba(255, 255, 255, .9);
+    }
+
+    .mesh {
+      background:
+        radial-gradient(circle at 16% 18%, #8EA2FF 0 14%, transparent 32%),
+        radial-gradient(circle at 78% 9%, #FFB3D9 0 13%, transparent 30%),
+        radial-gradient(circle at 66% 62%, #FFD3A8 0 16%, transparent 34%),
+        radial-gradient(circle at 25% 74%, #9BE3FF 0 15%, transparent 32%),
+        radial-gradient(circle at 50% 32%, #C4A5FF 0 16%, transparent 36%),
+        linear-gradient(135deg, #fff, #F5F0FF 40%, #FFF7F0);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin: 0 0 16px;
+      color: #7060C8;
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: 25px;
+      font-style: italic;
+      line-height: 1;
+    }
+
+    .section-heading {
+      max-width: 760px;
+      margin: 0 auto 44px;
+      text-align: center;
+    }
+
+    .section-heading h2 {
+      margin: 0;
+      font-size: clamp(32px, 4.2vw, 56px);
+      font-weight: 800;
+      letter-spacing: -.055em;
+      line-height: 1.1;
+      word-break: keep-all;
+      text-wrap: balance;
+    }
+
+    .section-heading > p:last-child {
+      margin: 18px auto 0;
+      max-width: 580px;
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.8;
+      word-break: keep-all;
+    }
+
+    .gradient-text {
+      color: #8B5CF6;
+      background: linear-gradient(120deg, #4F6BFF, #8B5CF6 40%, #EC4899 70%, #FF7A45);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .pill-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 44px;
+      padding: 0 20px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--ink);
+      color: white;
+      font-size: 13px;
+      font-weight: 700;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: transform .25s var(--spring), box-shadow .25s;
+    }
+
+    .pill-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 28px rgba(20, 20, 43, .16);
+    }
+
+    .secondary-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 18px;
+      border: 1px solid rgba(255, 255, 255, .8);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .48);
+      -webkit-backdrop-filter: blur(16px);
+      backdrop-filter: blur(16px);
+      font-size: 13px;
+      font-weight: 650;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: transform .25s var(--spring);
+    }
+
+    .secondary-button:hover {
+      transform: translateY(-2px);
+    }
+
+    /* 상단 내비게이션 */
+    .nav-wrap {
+      position: fixed;
+      top: 14px;
+      left: 0;
+      right: 0;
+      z-index: 50;
+      display: flex;
+      justify-content: center;
+      padding-inline: 12px;
+      pointer-events: none;
+    }
+
+    .nav {
+      width: min(1080px, 100%);
+      min-height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 9px 12px 9px 18px;
+      border: 1px solid rgba(255, 255, 255, .8);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .76);
+      -webkit-backdrop-filter: blur(24px) saturate(160%);
+      backdrop-filter: blur(24px) saturate(160%);
+      box-shadow: 0 12px 40px rgba(76, 70, 160, .09);
+      pointer-events: auto;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: -.035em;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      position: relative;
+      flex: none;
+      width: 30px;
+      height: 30px;
+      overflow: hidden;
+      border-radius: 11px;
+      background: var(--brand);
+      box-shadow: inset 0 1px 2px rgba(255, 255, 255, .6);
+    }
+
+    .brand-mark::before,
+    .brand-mark::after {
+      content: "";
+      position: absolute;
+      border: 1.5px solid rgba(255, 255, 255, .9);
+      border-radius: 50%;
+      transform: rotate(-35deg);
+    }
+
+    .brand-mark::before {
+      inset: 6px 3px;
+    }
+
+    .brand-mark::after {
+      inset: 3px 7px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      color: #626278;
+      font-size: 12px;
+      font-weight: 650;
+      white-space: nowrap;
+    }
+
+    .nav-links a {
+      transition: color .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--ink);
+    }
+
+    .nav .pill-button {
+      min-height: 40px;
+      padding-inline: 18px;
+    }
+
+    /* 히어로 */
+    .hero {
+      position: relative;
+      isolation: isolate;
+      min-height: 0;
+      margin: 96px 12px 0;
+      padding: 30px 20px 20px;
+      overflow: hidden;
+      border-radius: 36px;
+      background-color: #F2EDFF;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: -12%;
+      z-index: -2;
+      background:
+        radial-gradient(ellipse at 15% 20%, #9EB0FF 0, transparent 36%),
+        radial-gradient(ellipse at 82% 10%, #FFB8DD 0, transparent 35%),
+        radial-gradient(ellipse at 80% 78%, #FFCBA3 0, transparent 35%),
+        radial-gradient(ellipse at 18% 85%, #A5E8F9 0, transparent 34%),
+        radial-gradient(ellipse at 50% 40%, #D1B9FF 0, transparent 40%),
+        linear-gradient(125deg, #E9EEFF, #F7E7FF 48%, #FFF0E3);
+      background-size: 140% 140%;
+      animation: mesh-drift 24s ease-in-out infinite alternate;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background: linear-gradient(180deg, rgba(255,255,255,.12), transparent 50%, rgba(255,255,255,.15));
+    }
+
+    @keyframes mesh-drift {
+      0% { transform: translate3d(-1%, 0, 0) scale(1); }
+      50% { transform: translate3d(1%, 2%, 0) scale(1.04); }
+      100% { transform: translate3d(0, -1%, 0) scale(1.02); }
+    }
+
+    .hero-inner {
+      position: relative;
+      width: min(920px, 100%);
+      margin-inline: auto;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 14px;
+      border: 1px solid rgba(255, 255, 255, .8);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .48);
+      -webkit-backdrop-filter: blur(18px);
+      backdrop-filter: blur(18px);
+      color: #464567;
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .status-dot {
+      width: 7px;
+      height: 7px;
+      flex: none;
+      border-radius: 50%;
+      background: #A2A2B4;
+    }
+
+    body.is-connected .status-dot {
+      background: #24B47E;
+      box-shadow: 0 0 0 3px rgba(36, 180, 126, .12);
+    }
+
+    .hero-kicker {
+      margin: 13px 0 9px;
+      font-family: "Instrument Serif", Georgia, serif;
+      font-size: clamp(19px, 2vw, 25px);
+      font-style: italic;
+      color: #6557B7;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(40px, 6vw, 76px);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -.065em;
+      word-break: keep-all;
+      text-wrap: balance;
+    }
+
+    .hero-description {
+      max-width: 570px;
+      margin: 13px auto 21px;
+      color: #51516B;
+      font-size: clamp(13px, 1.5vw, 15px);
+      line-height: 1.7;
+      word-break: keep-all;
+    }
+
+    /* 채팅 카드 */
+    .chat-card {
+      width: min(860px, 100%);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, .85);
+      border-radius: 25px;
+      background: rgba(255, 255, 255, .62);
+      -webkit-backdrop-filter: blur(30px) saturate(160%);
+      backdrop-filter: blur(30px) saturate(160%);
+      box-shadow: 0 25px 70px -35px rgba(76, 70, 160, .35),
+        inset 0 1px 1px white;
+      transition: box-shadow .3s;
+    }
+
+    .chat-card > * {
+      flex: none;
+    }
+
+    .chat-topbar {
+      min-width: 0;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 0 14px;
+      border-bottom: 1px solid rgba(20, 20, 43, .06);
+    }
+
+    .window-dots {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      flex: none;
+    }
+
+    .window-dots span {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #D3D0DC;
+    }
+
+    .window-dots span:first-child { background: #FFAAA7; }
+    .window-dots span:nth-child(2) { background: #FFD18C; }
+    .window-dots span:nth-child(3) { background: #A4DCC1; }
+
+    .chat-title {
+      min-width: 0;
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-size: 11px;
+      font-weight: 750;
+    }
+
+    .connection-label {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 10px;
+      white-space: nowrap;
+    }
+
+    .connection-label .status-dot {
+      width: 6px;
+      height: 6px;
+    }
+
+    .reset-button {
+      flex: none;
+      min-height: 30px;
+      padding: 0 11px;
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 999px;
+      background: rgba(255,255,255,.65);
+      font-size: 10px;
+      font-weight: 700;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    #webchat {
+      height: 200px;
+      min-height: 0;
+      padding: 0 14px;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(100, 90, 160, .22) transparent;
+    }
+
+    body.is-started .chat-card {
+      height: calc(100svh - 112px);
+      min-height: 420px;
+      box-shadow: 0 25px 90px -30px rgba(76, 70, 160, .35);
+    }
+
+    body.is-started .chat-card > #webchat {
+      flex: 1 1 0;
+      height: auto;
+      min-height: 0;
+    }
+
+    .chat-foot {
+      padding: 0 14px 13px;
+    }
+
+    .example-chips,
+    .suggested-actions {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      white-space: nowrap;
+    }
+
+    .example-chips::-webkit-scrollbar,
+    .suggested-actions::-webkit-scrollbar,
+    .marquee-track::-webkit-scrollbar {
+      display: none;
+    }
+
+    .example-chips {
+      padding: 8px 0 11px;
+    }
+
+    .example-chip,
+    .suggestion-chip {
+      flex: none;
+      min-height: 31px;
+      padding: 0 12px;
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 999px;
+      background: rgba(255,255,255,.55);
+      color: #55536F;
+      font-size: 10px;
+      font-weight: 650;
+      cursor: pointer;
+      transition: background .2s, transform .2s;
+    }
+
+    .example-chip:hover,
+    .suggestion-chip:hover {
+      background: white;
+      transform: translateY(-1px);
+    }
+
+    body.is-started .example-chips {
+      display: none;
+    }
+
+    .suggested-actions {
+      padding: 0 0 9px;
+    }
+
+    .suggested-actions:empty {
+      display: none;
+    }
+
+    .work-status {
+      display: none;
+      align-items: center;
+      gap: 9px;
+      min-height: 29px;
+      padding: 0 3px 7px;
+      color: #6557B7;
+      font-size: 10px;
+    }
+
+    body.is-working .work-status {
+      display: flex;
+    }
+
+    .work-dots {
+      display: flex;
+      gap: 3px;
+    }
+
+    .work-dots span {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #6E8BFF, #FF8AC8);
+      animation: dot-pulse 1.1s ease-in-out infinite;
+    }
+
+    .work-dots span:nth-child(2) { animation-delay: .12s; }
+    .work-dots span:nth-child(3) { animation-delay: .24s; }
+    .work-dots span:nth-child(4) { animation-delay: .36s; }
+    .work-dots span:nth-child(5) { animation-delay: .48s; }
+
+    @keyframes dot-pulse {
+      0%, 60%, 100% { transform: translateY(0); opacity: .45; }
+      30% { transform: translateY(-4px); opacity: 1; }
+    }
+
+    .work-time {
+      margin-left: auto;
+      color: #77718F;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .work-hint {
+      display: none;
+      margin: 0;
+      color: #77718F;
+      font-size: 10px;
+    }
+
+    body.is-working.is-waiting-long .work-hint {
+      display: block;
+    }
+
+    .composer {
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      gap: 8px;
+      min-height: 56px;
+      padding: 7px 8px 7px 17px;
+      border: 1px solid rgba(255,255,255,.95);
+      border-radius: 25px;
+      background: rgba(255,255,255,.76);
+      box-shadow: 0 8px 24px rgba(76,70,160,.07), inset 0 1px 1px white;
+      transition: transform .25s var(--spring), box-shadow .25s;
+    }
+
+    .composer:focus-within {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(76,70,160,.13), inset 0 1px 1px white;
+    }
+
+    @property --aurora {
+      syntax: "<angle>";
+      inherits: false;
+      initial-value: 0deg;
+    }
+
+    .composer::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      padding: 1.5px;
+      border-radius: inherit;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity .6s;
+      background: conic-gradient(from var(--aurora), #a5b4fc, #f0abfc, #fda4af, #fcd34d, #86efac, #67e8f9, #a5b4fc);
+      -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      animation: aurora 6s linear infinite;
+    }
+
+    body.is-working .composer::before {
+      opacity: .8;
+    }
+
+    @keyframes aurora {
+      to { --aurora: 360deg; }
+    }
+
+    .composer textarea {
+      width: 100%;
+      min-width: 0;
+      max-height: 144px;
+      min-height: 39px;
+      padding: 10px 0 8px;
+      resize: none;
+      overflow-y: auto;
+      border: 0;
+      outline: none;
+      background: transparent;
+      color: var(--ink);
+      font-size: 13px;
+      line-height: 1.55;
+      word-break: keep-all;
+    }
+
+    .composer textarea::placeholder {
+      color: #9694A8;
+    }
+
+    .send-button {
+      display: grid;
+      place-items: center;
+      width: 40px;
+      height: 40px;
+      flex: none;
+      margin-bottom: 1px;
+      border: 0;
+      border-radius: 50%;
+      background: var(--ink);
+      color: white;
+      font-size: 21px;
+      cursor: pointer;
+      transition: opacity .2s, transform .2s var(--spring);
+    }
+
+    .send-button:hover:not(:disabled) {
+      transform: translateY(-2px);
+    }
+
+    .send-button:disabled {
+      opacity: .3;
+    }
+
+    .chat-disclaimer {
+      margin: 9px 0 0;
+      color: #8C899F;
+      font-size: 9px;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .connection-error {
+      display: none;
+      padding: 17px 0;
+      color: #55536F;
+      text-align: center;
+    }
+
+    body.is-error .connection-error {
+      display: block;
+    }
+
+    .connection-error p {
+      margin: 0 0 8px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .connection-error code {
+      display: block;
+      max-width: 100%;
+      margin-bottom: 12px;
+      overflow-wrap: anywhere;
+      color: #858198;
+      font-size: 10px;
+    }
+
+    .retry-button {
+      padding: 7px 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,.7);
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .chat-loading {
+      padding: 35px 0;
+      color: #77718F;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .chat-loading[hidden] {
+      display: none;
+    }
+
+    .chat-card.is-failed .chat-foot {
+      display: none;
+    }
+
+    /* 히어로 아래 기술 띠 */
+    .tech-strip {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 10px 24px;
+      padding: 24px 12px 5px;
+      color: #858198;
+      font-size: 10px;
+      font-weight: 650;
+      letter-spacing: .01em;
+    }
+
+    .tech-strip span {
+      white-space: nowrap;
+    }
+
+    .tech-strip span + span::before {
+      content: "·";
+      margin-right: 24px;
+      color: #B6B1C8;
+    }
+
+    /* 숫자 */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      padding-block: 66px 82px;
+    }
+
+    .stat {
+      padding: 24px 16px;
+      border: 1px solid rgba(255,255,255,.85);
+      border-radius: 22px;
+      background: rgba(255,255,255,.55);
+      box-shadow: inset 0 1px 1px white;
+      text-align: center;
+    }
+
+    .stat-number {
+      display: block;
+      margin-bottom: 6px;
+      font-size: clamp(27px, 4vw, 43px);
+      font-weight: 800;
+      letter-spacing: -.06em;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    /* 기능 카드 */
+    .features-section {
+      padding: 20px 0 100px;
+      scroll-margin-top: 96px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .feature-card {
+      grid-column: span 2;
+      min-width: 0;
+      padding: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 25px;
+      background: linear-gradient(145deg, rgba(255,255,255,.82), rgba(246,245,253,.76));
+      box-shadow: 0 15px 40px -30px rgba(76,70,160,.25), inset 0 1px 1px white;
+      transition: transform .35s var(--spring), box-shadow .35s;
+    }
+
+    .feature-card:nth-child(n+3) {
+      grid-column: span 2;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 45px -30px rgba(76,70,160,.4), inset 0 1px 1px white;
+    }
+
+    .mockup {
+      position: relative;
+      height: 176px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 23px;
+      overflow: hidden;
+      border-radius: 17px;
+      background: linear-gradient(140deg, #F0EFFF, #FBEFFC 60%, #FFF4ED);
+    }
+
+    .feature-card:nth-child(2) .mockup {
+      background: linear-gradient(140deg, #E9E7FF, #F9DDF0);
+    }
+
+    .feature-card:nth-child(3) .mockup {
+      background: linear-gradient(140deg, #F2F0FF, #E6ECFF);
+    }
+
+    .feature-card:nth-child(4) .mockup {
+      background: linear-gradient(140deg, #E4F2FF, #F4E7FF);
+    }
+
+    .feature-card:nth-child(5) .mockup {
+      background: linear-gradient(140deg, #E2F8F0, #E6F0FF);
+    }
+
+    .mockup-inner {
+      width: 78%;
+      height: 78%;
+      transition: transform .45s var(--spring);
+    }
+
+    .feature-card:hover .mockup-inner {
+      transform: translateY(-4px);
+    }
+
+    /* 발표자료 목업 */
+    .slides {
+      position: relative;
+      width: 150px;
+      height: 105px;
+      margin: auto;
+      perspective: 600px;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 13px;
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 7px;
+      background: white;
+      box-shadow: 0 8px 20px rgba(70,60,130,.12);
+      transition: transform .45s var(--spring);
+    }
+
+    .slide::before {
+      content: "";
+      width: 55%;
+      height: 5px;
+      margin-bottom: 8px;
+      border-radius: 4px;
+      background: #8C79F7;
+    }
+
+    .slide::after {
+      content: "";
+      width: 85%;
+      height: 3px;
+      margin-bottom: 4px;
+      border-radius: 4px;
+      background: #E4E1F0;
+      box-shadow: 0 7px 0 #E4E1F0;
+    }
+
+    .slide:nth-child(1) {
+      transform: translate(-15px, -7px) rotate(-9deg);
+      background: linear-gradient(145deg, white, #F0EDFF);
+    }
+
+    .slide:nth-child(2) {
+      transform: translate(7px, -3px) rotate(6deg);
+      background: linear-gradient(145deg, white, #FBE8F5);
+    }
+
+    .slide:nth-child(3) {
+      transform: translate(0, 8px);
+    }
+
+    .feature-card:hover .slide:nth-child(1) {
+      transform: translate(-46px, -8px) rotate(-17deg);
+    }
+
+    .feature-card:hover .slide:nth-child(2) {
+      transform: translate(40px, -6px) rotate(14deg);
+    }
+
+    .feature-card:hover .slide:nth-child(3) {
+      transform: translate(0, 12px) rotate(-1deg);
+    }
+
+    /* 포스터 목업 */
+    .poster-mock {
+      width: 112px;
+      height: 140px;
+      margin: auto;
+      padding: 17px 12px;
+      border-radius: 7px;
+      background:
+        radial-gradient(circle at 80% 20%, rgba(255,190,220,.9), transparent 42%),
+        linear-gradient(145deg, #4832B5, #7E43E7 50%, #FF6FA9);
+      box-shadow: 0 12px 25px rgba(104,65,190,.25);
+      color: white;
+      transform: rotate(-3deg);
+      transition: transform .4s var(--spring);
+    }
+
+    .feature-card:hover .poster-mock {
+      transform: rotate(0) scale(1.04);
+    }
+
+    .poster-mock small {
+      display: block;
+      font-size: 6px;
+      letter-spacing: .12em;
+    }
+
+    .poster-mock strong {
+      display: block;
+      margin-top: 23px;
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -.06em;
+      word-break: keep-all;
+    }
+
+    .poster-mock span {
+      display: block;
+      margin-top: 9px;
+      font-size: 7px;
+      line-height: 1.5;
+    }
+
+    /* 제안서 목업 */
+    .document-mock {
+      width: 130px;
+      height: 144px;
+      margin: auto;
+      padding: 0 12px 10px;
+      overflow: hidden;
+      border: 1px solid rgba(220,215,235,.9);
+      border-radius: 6px;
+      background: white;
+      box-shadow: 0 12px 25px rgba(70,60,130,.1);
+      transition: transform .4s var(--spring);
+    }
+
+    .feature-card:hover .document-mock {
+      transform: translateY(-5px) rotate(1deg);
+    }
+
+    .document-cover {
+      height: 48px;
+      margin: 0 -12px 12px;
+      background: linear-gradient(120deg, #6E8BFF, #A77BFF 50%, #FF8AC8);
+    }
+
+    .document-mock strong {
+      display: block;
+      margin-bottom: 10px;
+      font-size: 10px;
+    }
+
+    .document-line {
+      display: block;
+      height: 3px;
+      margin-bottom: 5px;
+      border-radius: 3px;
+      background: #E7E5EE;
+    }
+
+    .document-line:nth-last-child(2) {
+      width: 70%;
+    }
+
+    /* 웹페이지 목업 */
+    .browser-mock {
+      width: 100%;
+      max-width: 220px;
+      height: 128px;
+      margin: auto;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 9px;
+      background: rgba(255,255,255,.9);
+      box-shadow: 0 12px 25px rgba(70,60,130,.12);
+      transition: transform .4s var(--spring);
+    }
+
+    .feature-card:hover .browser-mock {
+      transform: translateY(-4px) scale(1.02);
+    }
+
+    .browser-top {
+      height: 17px;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+      padding-inline: 7px;
+      border-bottom: 1px solid #F0EDF7;
+    }
+
+    .browser-top span {
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #D2CDE3;
+    }
+
+    .browser-content {
+      padding: 10px;
+    }
+
+    .browser-nav {
+      width: 100%;
+      height: 6px;
+      margin-bottom: 12px;
+      border-radius: 3px;
+      background: #ECE9F7;
+    }
+
+    .browser-title {
+      width: 72%;
+      height: 12px;
+      margin-bottom: 6px;
+      border-radius: 3px;
+      background: linear-gradient(90deg, #7A80FF, #D18AFF);
+    }
+
+    .browser-subtitle {
+      width: 92%;
+      height: 4px;
+      margin-bottom: 4px;
+      border-radius: 3px;
+      background: #E6E3ED;
+    }
+
+    .browser-cta {
+      width: 52px;
+      height: 14px;
+      margin-top: 9px;
+      border-radius: 8px;
+      background: #17172C;
+    }
+
+    /* 예산 목업 */
+    .budget-mock {
+      width: 100%;
+      max-width: 220px;
+      margin: auto;
+      padding: 14px;
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 12px;
+      background: rgba(255,255,255,.85);
+      box-shadow: 0 12px 25px rgba(70,60,130,.1);
+    }
+
+    .budget-label {
+      color: #858198;
+      font-size: 8px;
+      font-weight: 650;
+    }
+
+    .budget-value {
+      display: block;
+      margin: 5px 0 13px;
+      font-size: 21px;
+      font-weight: 800;
+      letter-spacing: -.05em;
+    }
+
+    .chart {
+      height: 57px;
+      display: flex;
+      align-items: flex-end;
+      gap: 7px;
+      padding-top: 5px;
+    }
+
+    .chart span {
+      flex: 1;
+      height: var(--h);
+      min-width: 0;
+      border-radius: 4px 4px 1px 1px;
+      background: linear-gradient(180deg, #9B8AFF, #6E8BFF);
+      transform: scaleY(.2);
+      transform-origin: bottom;
+      transition: transform .8s var(--spring);
+    }
+
+    .revealed .chart span {
+      transform: scaleY(1);
+    }
+
+    .feature-copy h3 {
+      margin: 0 0 9px;
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: -.045em;
+      word-break: keep-all;
+    }
+
+    .feature-copy p {
+      min-height: 44px;
+      margin: 0 0 17px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+      word-break: keep-all;
+    }
+
+    .file-name {
+      display: inline-block;
+      padding: 7px 10px;
+      border: 1px solid rgba(20,20,43,.06);
+      border-radius: 8px;
+      background: rgba(244,242,251,.85);
+      color: #68617F;
+      font: 10px ui-monospace, SFMono-Regular, Menlo, monospace;
+      white-space: nowrap;
+    }
+
+    /* 작동 방식 */
+    .how-section {
+      padding: 20px 0 110px;
+      scroll-margin-top: 96px;
+    }
+
+    .how-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 48px;
+    }
+
+    .orbit-card {
+      min-width: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px 8px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 28px;
+      background:
+        radial-gradient(circle at 50% 48%, rgba(190,177,255,.23), transparent 48%),
+        rgba(255,255,255,.55);
+      box-shadow: inset 0 1px 1px white;
+    }
+
+    .orbit {
+      --r: 150px;
+      position: relative;
+      width: calc(var(--r) * 2);
+      aspect-ratio: 1;
+      margin: 36px auto;
+    }
+
+    .orbit-ring {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 1px dashed rgba(20,20,43,.16);
+      animation: orbit-spin 40s linear infinite;
+    }
+
+    .orbit .agent {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: rotate(var(--a)) translateX(var(--r)) rotate(calc(-1 * var(--a)));
+    }
+
+    .orbit .agent b {
+      position: absolute;
+      translate: -50% -50%;
+      white-space: nowrap;
+      padding: 8px 12px;
+      border-radius: 999px;
+      font: 600 12px ui-monospace, SFMono-Regular, Menlo, monospace;
+      color: #5B4BC4;
+      background: rgba(255,255,255,.8);
+      border: 1px solid #fff;
+      box-shadow: 0 5px 20px rgba(76,70,160,.08);
+      animation: orbit-spin 40s linear infinite reverse;
+    }
+
+    .orbit .leader {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      translate: -50% -50%;
+      width: 112px;
+      aspect-ratio: 1;
+      display: grid;
+      place-items: center;
+      border: 1px solid white;
+      border-radius: 50%;
+      background: var(--brand);
+      box-shadow: 0 12px 40px rgba(130,100,220,.2), inset 0 1px 1px white;
+      color: white;
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    @keyframes orbit-spin {
+      to { rotate: 360deg; }
+    }
+
+    .steps {
+      display: grid;
+      gap: 12px;
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 44px 1fr;
+      gap: 15px;
+      padding: 20px;
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 20px;
+      background: rgba(255,255,255,.56);
+      box-shadow: inset 0 1px 1px white;
+      transition: transform .3s var(--spring), background .3s;
+    }
+
+    .step:hover {
+      transform: translateX(4px);
+      background: rgba(255,255,255,.9);
+    }
+
+    .step-number {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: linear-gradient(140deg, #E8E9FF, #F9E4F6);
+      color: #6654BD;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .step h3 {
+      margin: 1px 0 7px;
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: -.035em;
+    }
+
+    .step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.8;
+      word-break: keep-all;
+    }
+
+    /* 디자인 테마 */
+    .design-section {
+      position: relative;
+      padding: 90px 0 96px;
+      overflow: hidden;
+      background: linear-gradient(115deg, #5B3DF5, #B04DEB 42%, #FF4FA3 72%, #FF9F45);
+      color: white;
+      scroll-margin-top: 96px;
+    }
+
+    .design-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 12% 15%, rgba(255,255,255,.22), transparent 25%),
+        radial-gradient(circle at 88% 80%, rgba(255,220,190,.28), transparent 28%);
+      pointer-events: none;
+    }
+
+    .design-section .section-heading {
+      position: relative;
+    }
+
+    .design-section .eyebrow {
+      color: rgba(255,255,255,.9);
+    }
+
+    .design-section .section-heading > p:last-child {
+      color: rgba(255,255,255,.8);
+    }
+
+    .design-section .section-heading h2 {
+      color: white;
+    }
+
+    .theme-grid {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .theme-card {
+      min-width: 0;
+      padding: 19px 15px;
+      border: 1px solid rgba(255,255,255,.5);
+      border-radius: 20px;
+      background: rgba(255,255,255,.17);
+      -webkit-backdrop-filter: blur(22px) saturate(150%);
+      backdrop-filter: blur(22px) saturate(150%);
+      box-shadow: inset 0 1px 1px rgba(255,255,255,.25);
+      transition: transform .3s var(--spring), background .3s;
+    }
+
+    .theme-card:hover {
+      transform: translateY(-5px);
+      background: rgba(255,255,255,.25);
+    }
+
+    .theme-swatches {
+      display: flex;
+      gap: 7px;
+      margin-bottom: 17px;
+    }
+
+    .swatch {
+      width: 29px;
+      height: 29px;
+      border: 2px solid rgba(255,255,255,.6);
+      border-radius: 50%;
+      box-shadow: 0 3px 8px rgba(0,0,0,.08);
+    }
+
+    .theme-card h3 {
+      margin: 0 0 7px;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .theme-card p {
+      margin: 0;
+      color: rgba(255,255,255,.82);
+      font-size: 10px;
+      line-height: 1.7;
+      word-break: keep-all;
+    }
+
+    /* 추천 프롬프트 */
+    .prompts-section {
+      padding: 100px 0;
+      overflow: hidden;
+    }
+
+    .marquee-window {
+      display: grid;
+      gap: 12px;
+      overflow: hidden;
+      padding: 8px 0;
+      mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+      -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      gap: 10px;
+      animation: marquee-forward 42s linear infinite;
+    }
+
+    .marquee-track.reverse {
+      animation-name: marquee-reverse;
+      animation-duration: 48s;
+    }
+
+    .marquee-window:hover .marquee-track {
+      animation-play-state: paused;
+    }
+
+    @keyframes marquee-forward {
+      to { transform: translateX(-50%); }
+    }
+
+    @keyframes marquee-reverse {
+      from { transform: translateX(-50%); }
+      to { transform: translateX(0); }
+    }
+
+    .prompt-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 0 19px;
+      border: 1px solid rgba(255,255,255,.9);
+      border-radius: 999px;
+      background: rgba(255,255,255,.7);
+      box-shadow: 0 8px 22px rgba(76,70,160,.05), inset 0 1px 1px white;
+      color: #4E4B68;
+      font-size: 12px;
+      font-weight: 650;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: transform .25s var(--spring), background .25s;
+    }
+
+    .prompt-chip:hover {
+      transform: translateY(-3px);
+      background: white;
+    }
+
+    .prompt-chip span {
+      color: #8B72E8;
+    }
+
+    /* 마지막 CTA */
+    .cta {
+      position: relative;
+      margin: 0 12px 20px;
+      padding: 86px 20px 78px;
+      overflow: hidden;
+      border-radius: 36px;
+      text-align: center;
+    }
+
+    .cta-inner {
+      position: relative;
+      max-width: 780px;
+      margin: auto;
+    }
+
+    .cta .eyebrow {
+      color: #6557B7;
+    }
+
+    .cta h2 {
+      margin: 0 0 27px;
+      font-size: clamp(40px, 6vw, 72px);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -.06em;
+      word-break: keep-all;
+      text-wrap: balance;
+    }
+
+    .cta .pill-button {
+      min-height: 53px;
+      padding-inline: 25px;
+      font-size: 14px;
+    }
+
+    /* 푸터 */
+    .footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 28px 0 36px;
+      color: #89869D;
+      font-size: 10px;
+    }
+
+    .footer-brand {
+      color: #55536F;
+      font-weight: 800;
+    }
+
+    /* 화면 밖에서 작업 상태 확인 */
+    .floating-status {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      z-index: 60;
+      display: none;
+      align-items: center;
+      gap: 9px;
+      max-width: calc(100vw - 40px);
+      padding: 13px 17px;
+      border: 1px solid rgba(255,255,255,.85);
+      border-radius: 999px;
+      background: rgba(255,255,255,.83);
+      -webkit-backdrop-filter: blur(24px) saturate(160%);
+      backdrop-filter: blur(24px) saturate(160%);
+      box-shadow: 0 12px 35px rgba(76,70,160,.16);
+      font-size: 11px;
+      font-weight: 750;
+      white-space: nowrap;
+      cursor: pointer;
+    }
+
+    body.is-started.is-working .floating-status,
+    body.is-started.is-result .floating-status {
+      display: inline-flex;
+    }
+
+    .floating-status .status-dot {
+      background: #A28AF5;
+      animation: floating-pulse 1.5s ease-in-out infinite;
+    }
+
+    body.is-result .floating-status .status-dot {
+      background: #24B47E;
+      animation: none;
+    }
+
+    @keyframes floating-pulse {
+      50% { box-shadow: 0 0 0 5px rgba(162,138,245,.15); }
+    }
+
+    /* 등장 효과 */
+    .js-reveal [data-reveal] {
+      opacity: 0;
+      filter: blur(8px);
+      transform: translateY(22px);
+      transition: opacity .7s ease, filter .7s ease, transform .7s var(--spring);
+      transition-delay: var(--delay, 0ms);
+    }
+
+    .js-reveal [data-reveal].revealed {
+      opacity: 1;
+      filter: blur(0);
+      transform: translateY(0);
+    }
+
+    /* Web Chat 기본 요소 및 첨부 파일 카드 */
+    #webchat .webchat__typing-indicator {
+      display: none !important;
+    }
+
+    #webchat .webchat__stacked-layout:not(.webchat__stacked-layout--from-user) .webchat__stacked-layout__status {
+      display: none;
+    }
+
+    #webchat .webchat__stacked-layout__attachment-row {
+      margin-top: 8px !important;
+    }
+
+    #webchat .webchat__stacked-layout__attachment,
+    #webchat .webchat__stacked-layout__attachment .webchat__bubble__content {
+      background: none !important;
+      border: 0 !important;
+      overflow: visible !important;
+    }
+
+    #webchat .webchat__stacked-layout__content:has(.webchat__fileContent) {
+      overflow: visible !important;
+    }
+
+    #webchat .webchat__fileContent {
+      padding: 0 !important;
+    }
+
+    #webchat .webchat__fileContent__buttonLink {
+      display: flex !important;
+      align-items: center;
+      gap: 12px;
+      height: 56px;
+      padding: 0 18px 0 12px;
+      border-radius: 18px;
+      text-decoration: none;
+      color: #14142B;
+      background: rgba(255,255,255,.72);
+      -webkit-backdrop-filter: blur(24px) saturate(160%);
+      backdrop-filter: blur(24px) saturate(160%);
+      border: 1px solid rgba(255,255,255,.8);
+      box-shadow: 0 10px 24px -16px rgba(76,70,160,.3), inset 0 1px 1px #fff;
+    }
+
+    #webchat .webchat__fileContent__buttonLink::before {
+      content: "FILE";
+      flex: none;
+      padding: 5px 8px;
+      border-radius: 999px;
+      background: linear-gradient(120deg, #EEF0FF, #FBEFFF);
+      color: #5B4BC4;
+      font: 600 10.5px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+      letter-spacing: .04em;
+    }
+
+    #webchat a[download$=".pptx" i]::before { content: "PPTX"; }
+    #webchat a[download$=".docx" i]::before { content: "DOCX"; }
+    #webchat a[download$=".xlsx" i]::before { content: "XLSX"; }
+    #webchat a[download$=".html" i]::before { content: "HTML"; }
+
+    #webchat .webchat__fileContent__badge {
+      flex: 1;
+      min-width: 0;
+      background: none !important;
+      padding: 0 !important;
+    }
+
+    #webchat .webchat__fileContent__fileName {
+      font: 13px ui-monospace, SFMono-Regular, Menlo, monospace !important;
+      color: #14142B !important;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    #webchat .webchat__fileContent__downloadIcon {
+      flex: none;
+      box-sizing: content-box;
+      width: 16px;
+      height: 16px;
+      padding: 0;
+      fill: #6B6B80;
+      color: #6B6B80;
+    }
+
+    #webchat .webchat__render-markdown {
+      word-break: keep-all;
+      overflow-wrap: anywhere;
+      line-height: 1.7;
+    }
+
+    #webchat .webchat__render-markdown table {
+      display: block;
+      max-width: 100%;
+      overflow-x: auto;
+      border-collapse: collapse;
+      border-spacing: 0;
+      margin: 12px 0;
+      font-variant-numeric: tabular-nums;
+    }
+
+    #webchat .webchat__render-markdown th,
+    #webchat .webchat__render-markdown td {
+      padding: 9px 18px 9px 0;
+      border-bottom: 1px solid rgba(20,20,43,.08);
+      white-space: nowrap;
+    }
+
+    #webchat .webchat__render-markdown th {
+      font-size: 12px;
+      font-weight: 600;
+      color: #6B6B80;
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        gap: 15px;
+      }
+
+      .feature-card {
+        padding: 20px;
+      }
+
+      .how-grid {
+        gap: 28px;
+      }
+
+      .theme-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .theme-card:nth-child(4),
+      .theme-card:nth-child(5) {
+        grid-column: span 1;
+      }
+    }
+
+    @media (max-width: 600px) {
+      html {
+        scroll-padding-top: 86px;
+      }
+
+      .container {
+        width: calc(100% - 32px);
+      }
+
+      .nav-wrap {
+        top: 10px;
+        padding-inline: 8px;
+      }
+
+      .nav {
+        min-height: 54px;
+        gap: 8px;
+        padding: 7px 8px 7px 11px;
+      }
+
+      .brand {
+        gap: 7px;
+        font-size: 11px;
+      }
+
+      .brand-mark {
+        width: 26px;
+        height: 26px;
+        border-radius: 9px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav .pill-button {
+        min-height: 37px;
+        padding-inline: 13px;
+        font-size: 11px;
+      }
+
+      .hero {
+        margin: 76px 8px 0;
+        padding: 22px 12px 15px;
+        border-radius: 25px;
+      }
+
+      .hero-badge {
+        gap: 6px;
+        padding: 8px 10px;
+        font-size: 9px;
+      }
+
+      .hero-kicker {
+        margin: 12px 0 9px;
+        font-size: 20px;
+      }
+
+      .hero h1 {
+        font-size: clamp(36px, 9.2vw, 48px);
+        letter-spacing: -.065em;
+      }
+
+      .hero-description {
+        margin: 12px auto 17px;
+        font-size: 12px;
+        line-height: 1.7;
+      }
+
+      .chat-card {
+        border-radius: 20px;
+      }
+
+      .chat-topbar {
+        height: 41px;
+        gap: 8px;
+        padding-inline: 10px;
+      }
+
+      .chat-title {
+        font-size: 10px;
+      }
+
+      .connection-label {
+        gap: 4px;
+        font-size: 9px;
+      }
+
+      .reset-button {
+        min-height: 28px;
+        padding-inline: 9px;
+        font-size: 9px;
+      }
+
+      #webchat {
+        padding-inline: 9px;
+      }
+
+      .chat-foot {
+        padding: 0 9px 10px;
+      }
+
+      .example-chips {
+        gap: 6px;
+        padding-top: 8px;
+        padding-bottom: 9px;
+      }
+
+      .example-chip {
+        padding-inline: 10px;
+        font-size: 9px;
+      }
+
+      .composer {
+        min-height: 53px;
+        padding-left: 13px;
+        border-radius: 21px;
+      }
+
+      .composer textarea {
+        font-size: 12px;
+      }
+
+      .send-button {
+        width: 37px;
+        height: 37px;
+      }
+
+      .chat-disclaimer {
+        font-size: 9px;
+      }
+
+      .tech-strip {
+        gap: 8px 14px;
+        padding-top: 18px;
+        font-size: 9px;
+      }
+
+      .tech-strip span + span::before {
+        margin-right: 14px;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+        padding-block: 42px 65px;
+      }
+
+      .stat {
+        padding: 20px 10px;
+        border-radius: 18px;
+      }
+
+      .stat-number {
+        font-size: 32px;
+      }
+
+      .stat-label {
+        font-size: 10px;
+      }
+
+      .features-section,
+      .how-section {
+        padding-block: 15px 70px;
+      }
+
+      .section-heading {
+        margin-bottom: 30px;
+      }
+
+      .section-heading h2 {
+        font-size: clamp(31px, 8vw, 42px);
+      }
+
+      .section-heading > p:last-child {
+        font-size: 13px;
+      }
+
+      .feature-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 13px;
+      }
+
+      .feature-card,
+      .feature-card:nth-child(n+3) {
+        grid-column: span 1;
+        padding: 18px;
+        border-radius: 22px;
+      }
+
+      .mockup {
+        height: 165px;
+        margin-bottom: 19px;
+      }
+
+      .feature-copy h3 {
+        font-size: 18px;
+      }
+
+      .feature-copy p {
+        min-height: 0;
+        margin-bottom: 13px;
+        font-size: 12px;
+      }
+
+      .how-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 20px;
+      }
+
+      .orbit-card {
+        padding: 16px 6px;
+        border-radius: 23px;
+      }
+
+      .orbit {
+        --r: 100px;
+        margin: 28px auto;
+      }
+
+      .orbit .agent b {
+        font-size: 10px;
+        padding: 6px 9px;
+      }
+
+      .orbit .leader {
+        width: 84px;
+        font-size: 16px;
+      }
+
+      .step {
+        grid-template-columns: 38px 1fr;
+        gap: 12px;
+        padding: 16px;
+      }
+
+      .step-number {
+        width: 36px;
+        height: 36px;
+        border-radius: 12px;
+      }
+
+      .step h3 {
+        font-size: 14px;
+      }
+
+      .step p {
+        font-size: 11px;
+      }
+
+      .design-section {
+        padding: 70px 0;
+      }
+
+      .theme-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 9px;
+      }
+
+      .theme-card {
+        padding: 15px 12px;
+        border-radius: 17px;
+      }
+
+      .theme-card h3 {
+        font-size: 13px;
+      }
+
+      .theme-card p {
+        font-size: 10px;
+      }
+
+      .theme-swatches {
+        margin-bottom: 12px;
+      }
+
+      .swatch {
+        width: 25px;
+        height: 25px;
+      }
+
+      .prompts-section {
+        padding: 72px 0;
+      }
+
+      .prompt-chip {
+        min-height: 43px;
+        padding-inline: 15px;
+        font-size: 11px;
+      }
+
+      .cta {
+        margin: 0 8px 12px;
+        padding: 68px 14px 60px;
+        border-radius: 25px;
+      }
+
+      .cta h2 {
+        font-size: clamp(36px, 9.5vw, 48px);
+      }
+
+      .footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        padding-block: 22px 28px;
+        line-height: 1.6;
+      }
+
+      .floating-status {
+        right: 12px;
+        bottom: 12px;
+        padding: 12px 14px;
+        font-size: 10px;
+      }
+    }
+
+    @media (max-width: 360px) {
+      .brand {
+        font-size: 10px;
+      }
+
+      .nav .pill-button {
+        padding-inline: 10px;
+        font-size: 10px;
+      }
+
+      .hero h1 {
+        font-size: 35px;
+      }
+
+      .connection-label {
+        font-size: 8px;
+      }
+
+      .window-dots {
+        gap: 3px;
+      }
+
+      .window-dots span {
+        width: 6px;
+        height: 6px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
   </style>
 </head>
-<body>
-  <nav class="nav glass" aria-label="주요 메뉴">
-    <a class="brand" href="#top" aria-label="AI Creative Agent Team 홈"><span class="brand-mark"></span><span>AI Creative Agent Team</span></a>
-    <div class="nav-links"><a href="#features">기능</a><a href="#how">작동 방식</a><a href="#design">디자인</a></div>
-    <button class="pill pill-dark" type="button" data-chat-jump>지금 써 보기 <span aria-hidden="true">↗</span></button>
-  </nav>
 
-  <main id="top">
-    <section class="hero mesh">
+<body>
+  <!-- 고정 내비게이션 -->
+  <div class="nav-wrap">
+    <nav class="nav" aria-label="메인 내비게이션">
+      <a class="brand" href="#" aria-label="AI Creative Agent Team 홈">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span>AI Creative Agent Team</span>
+      </a>
+
+      <div class="nav-links">
+        <a href="#features">기능</a>
+        <a href="#how">작동 방식</a>
+        <a href="#design">디자인</a>
+      </div>
+
+      <button class="pill-button" type="button" data-chat-jump>
+        지금 써 보기 <span aria-hidden="true">↗</span>
+      </button>
+    </nav>
+  </div>
+
+  <main>
+    <!-- 히어로와 실제 대화창 -->
+    <section class="hero mesh" id="home">
       <div class="hero-inner">
-        <div class="hero-badge"><span class="status-dot"></span> Copilot Studio 멀티 에이전트</div>
-        <p class="hero-kicker serif">One idea, five deliverables.</p>
-        <h1>한 줄의 아이디어,<br><span class="gradient-text">다섯 개의 결과물.</span></h1>
-        <p class="hero-copy">팀장 에이전트가 전문가 다섯에게 일을 나눠,<br>발표자료부터 예산 분석까지 한 번에 만들어 드려요.</p>
-        <section class="chat-card" aria-label="AI 팀 대화창">
-          <div class="window-bar">
-            <span class="window-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span class="window-title">AI Creative Agent Team</span>
-            <span class="connection"><i></i><span id="connection-label">팀을 부르는 중…</span></span>
-            <span class="window-spacer"></span>
-            <button class="new-chat" id="new-chat" type="button">새 대화 ↻</button>
-          </div>
-          <div id="webchat" role="log" aria-live="polite" aria-label="대화 내용"></div>
-          <div class="connect-error" id="connect-error" role="status" aria-live="polite">지금은 팀과 연결할 수 없어요.<span class="error-raw" id="error-raw"></span><button class="retry" id="retry" type="button">다시 시도</button></div>
-          <div class="chat-foot">
-            <div class="example-row" id="example-row">
-              <button class="example-chip" type="button" data-send="가을 학교 축제 기획해 줘">가을 학교 축제 기획해 줘</button>
-              <button class="example-chip" type="button" data-send="탄소중립 캠페인 홍보물 만들어 줘">탄소중립 캠페인 홍보물 만들어 줘</button>
-              <button class="example-chip" type="button" data-send="교사 AI 연수 프로그램 제안해 줘">교사 AI 연수 프로그램 제안해 줘</button>
+        <div class="hero-badge">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>Copilot Studio 멀티 에이전트</span>
+        </div>
+
+        <p class="hero-kicker">One idea, five deliverables.</p>
+
+        <h1>
+          한 줄의 아이디어,<br>
+          <span class="gradient-text">다섯 개의 결과물.</span>
+        </h1>
+
+        <p class="hero-description">
+          팀장 에이전트가 전문가 다섯에게 일을 나눠,<br>
+          발표자료부터 예산 분석까지 한 번에 만들어 드려요.
+        </p>
+
+        <section class="chat-card" id="chat-card" aria-label="AI Creative Agent Team 채팅">
+          <div class="chat-topbar">
+            <div class="window-dots" aria-hidden="true">
+              <span></span><span></span><span></span>
             </div>
-            <div class="working-row" id="working-row"><span class="working-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span><span id="working-label">팀이 작업 중 · 0:00</span><span class="working-note" id="working-note"></span></div>
-            <div class="suggested-row" id="suggested-row" aria-label="추천 후속 작업"></div>
+
+            <div class="chat-title">AI Creative Agent Team</div>
+
+            <div class="connection-label" aria-live="polite">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span id="connection-label">연결 중</span>
+            </div>
+
+            <button class="reset-button" id="reset-chat" type="button">
+              새 대화 ↻
+            </button>
+          </div>
+
+          <div id="webchat" aria-label="대화 내용">
+            <div class="chat-loading" id="chat-loading">팀을 부르는 중…</div>
+          </div>
+
+          <div class="chat-foot">
+            <div class="example-chips" id="example-chips" aria-label="대화 예시">
+              <button class="example-chip" type="button" data-send-example="가을 학교 축제 기획해 줘">
+                가을 학교 축제 기획해 줘
+              </button>
+              <button class="example-chip" type="button" data-send-example="탄소중립 캠페인 홍보물 만들어 줘">
+                탄소중립 캠페인 홍보물 만들어 줘
+              </button>
+              <button class="example-chip" type="button" data-send-example="교사 AI 연수 프로그램 제안해 줘">
+                교사 AI 연수 프로그램 제안해 줘
+              </button>
+            </div>
+
+            <div class="work-status" aria-live="polite">
+              <div class="work-dots" aria-hidden="true">
+                <span></span><span></span><span></span><span></span><span></span>
+              </div>
+              <span id="work-label">팀이 작업 중</span>
+              <span class="work-time" id="work-time">0:00</span>
+            </div>
+
+            <p class="work-hint">
+              파일 5개를 만드느라 몇 분 걸릴 수 있어요.
+            </p>
+
+            <div class="suggested-actions" id="suggested-actions" aria-label="추천 답변"></div>
+
+            <div class="connection-error" id="connection-error" role="status" aria-live="polite">
+              <p id="error-title">지금은 팀과 연결할 수 없어요.</p>
+              <code id="error-detail"></code>
+              <button class="retry-button" id="retry-connect" type="button">다시 시도</button>
+            </div>
+
             <form class="composer" id="composer">
-              <textarea id="message-input" rows="1" maxlength="5000" placeholder="무엇을 만들어 볼까요?" aria-label="메시지 입력" disabled></textarea>
-              <button class="send-btn" id="send-btn" type="submit" aria-label="메시지 보내기" disabled>↑</button>
+              <textarea
+                id="message-input"
+                rows="1"
+                maxlength="12000"
+                placeholder="무엇을 만들어 볼까요?"
+                aria-label="메시지 입력"
+                disabled
+              ></textarea>
+
+              <button class="send-button" id="send-button" type="submit" disabled aria-label="메시지 보내기">
+                ↑
+              </button>
             </form>
-            <p class="chat-note">AI는 실수할 수 있어요. 중요한 내용은 확인하세요.</p>
+
+            <p class="chat-disclaimer">
+              AI는 실수할 수 있어요. 중요한 내용은 확인하세요.
+            </p>
           </div>
         </section>
       </div>
     </section>
-    <div class="logo-strip" aria-label="사용 기술"><span>Microsoft Copilot Studio</span><span>Claude Opus 5.5</span><span>PowerPoint</span><span>Word</span><span>Excel</span><span>HTML</span></div>
 
-    <section class="wrap stats" aria-label="팀 요약" data-reveal>
-      <div class="stat"><div class="stat-number" data-count="1">0</div><div class="stat-label">번의 요청</div></div>
-      <div class="stat"><div class="stat-number" data-count="6">0</div><div class="stat-label">명의 에이전트</div></div>
-      <div class="stat"><div class="stat-number" data-count="7">0</div><div class="stat-label">개의 작업 매뉴얼</div></div>
-      <div class="stat"><div class="stat-number" data-count="5">0</div><div class="stat-label">개의 파일</div></div>
-    </section>
+    <div class="tech-strip" aria-label="사용 기술 및 결과물">
+      <span>Microsoft Copilot Studio</span>
+      <span>Claude Opus 5.5</span>
+      <span>PowerPoint</span>
+      <span>Word</span>
+      <span>Excel</span>
+      <span>HTML</span>
+    </div>
 
-    <section class="section wrap" id="features">
-      <header class="section-head" data-reveal><p class="eyebrow serif">Five deliverables.</p><h2 class="section-title">한 번의 요청으로 받는<br>다섯 가지</h2><p class="section-copy">서로 다른 파일도 같은 기획과 디자인 언어로 연결돼요. 만들고, 고치고, 바로 활용하세요.</p></header>
-      <div class="deliver-grid">
-        <article class="deliver-card" data-reveal><div class="mockup"><div class="slides"><div class="slide s1"></div><div class="slide s2"></div><div class="slide s3"></div></div></div><h3>말할 거리가 정리된 10장</h3><p>10장 내외 슬라이드와 발표자 노트까지, 발표 흐름을 한 번에 잡아요.</p><span class="filename">presentation.pptx</span></article>
-        <article class="deliver-card" data-reveal><div class="mockup"><div class="poster"></div></div><h3>걸어 두고 싶은 한 장</h3><p>브라우저에서 바로 여는 유리 질감 포스터. 인쇄하거나 PDF로 저장해요.</p><span class="filename">poster.html</span></article>
-        <article class="deliver-card" data-reveal><div class="mockup"><div class="doc"></div></div><h3>바로 보낼 수 있는 제안서</h3><p>테마 색 표지와 읽기 좋은 본문으로 제안의 핵심을 명료하게 전달해요.</p><span class="filename">proposal.docx</span></article>
-        <article class="deliver-card" data-reveal><div class="mockup"><div class="browser"><div class="browser-top"><i></i><i></i><i></i></div><div class="browser-body"><div class="browser-nav"></div><div class="browser-title">Make it happen.</div><div class="browser-cta"></div></div></div></div><h3>신청까지 받는 랜딩</h3><p>유리 메뉴 바와 소개 카드로 만든 웹페이지에 신청 흐름을 담아요.</p><span class="filename">webpage.html</span></article>
-        <article class="deliver-card" data-reveal><div class="mockup"><div class="budget"><div class="budget-label">TOTAL PROJECT BUDGET</div><div class="budget-value">₩12,400,000</div><div class="bars"><i style="--h:35%"></i><i style="--h:60%"></i><i style="--h:48%"></i><i style="--h:78%"></i><i style="--h:100%"></i></div></div></div><h3>숫자가 맞는 예산</h3><p>숫자 카드와 차트, 합계는 수식으로. 예산 근거를 보기 쉽게 정리해요.</p><span class="filename">budget_analysis.xlsx</span></article>
+    <!-- 핵심 숫자 -->
+    <section class="stats container" aria-label="팀 구성">
+      <div class="stat" data-reveal>
+        <span class="stat-number gradient-text" data-count="1">0</span>
+        <span class="stat-label">한 번의 요청</span>
+      </div>
+      <div class="stat" data-reveal>
+        <span class="stat-number gradient-text" data-count="6">0</span>
+        <span class="stat-label">명의 에이전트</span>
+      </div>
+      <div class="stat" data-reveal>
+        <span class="stat-number gradient-text" data-count="7">0</span>
+        <span class="stat-label">개의 작업 매뉴얼</span>
+      </div>
+      <div class="stat" data-reveal>
+        <span class="stat-number gradient-text" data-count="5">0</span>
+        <span class="stat-label">개의 파일</span>
       </div>
     </section>
 
-    <section class="section wrap" id="how">
-      <header class="section-head" data-reveal><p class="eyebrow serif">How the team works.</p><h2 class="section-title">팀장 하나, 전문가 다섯,<br>매뉴얼 일곱.</h2><p class="section-copy">각 에이전트가 같은 브리프를 공유하고, 맡은 결과물을 병렬로 완성해요.</p></header>
+    <!-- 다섯 가지 결과물 -->
+    <section class="features-section container" id="features">
+      <header class="section-heading" data-reveal>
+        <p class="eyebrow">Five deliverables.</p>
+        <h2>한 번의 요청으로<br>받는 다섯 가지</h2>
+        <p>기획부터 문서 제작까지. 각 분야의 전문가가 하나의 아이디어를 다섯 가지 형태로 완성합니다.</p>
+      </header>
+
+      <div class="feature-grid">
+        <article class="feature-card" data-reveal>
+          <div class="mockup">
+            <div class="mockup-inner slides" aria-hidden="true">
+              <div class="slide"></div>
+              <div class="slide"></div>
+              <div class="slide"></div>
+            </div>
+          </div>
+          <div class="feature-copy">
+            <h3>말할 거리가 정리된 10장</h3>
+            <p>10장 내외의 슬라이드에 발표자 노트까지. 핵심 메시지가 살아 있는 발표자료를 만들어요.</p>
+            <span class="file-name">presentation.pptx</span>
+          </div>
+        </article>
+
+        <article class="feature-card" data-reveal>
+          <div class="mockup">
+            <div class="mockup-inner poster-mock" aria-hidden="true">
+              <small>IDEAS INTO ACTION</small>
+              <strong>MAKE<br>IT<br>HAPPEN.</strong>
+              <span>One idea can change everything.</span>
+            </div>
+          </div>
+          <div class="feature-copy">
+            <h3>걸어 두고 싶은 한 장</h3>
+            <p>브라우저에서 바로 여는 디자인 포스터. 인쇄하거나 PDF로 저장하기에도 좋아요.</p>
+            <span class="file-name">poster.html</span>
+          </div>
+        </article>
+
+        <article class="feature-card" data-reveal>
+          <div class="mockup">
+            <div class="mockup-inner document-mock" aria-hidden="true">
+              <div class="document-cover"></div>
+              <strong>프로젝트 제안서</strong>
+              <span class="document-line"></span>
+              <span class="document-line"></span>
+              <span class="document-line"></span>
+              <span class="document-line"></span>
+              <span class="document-line"></span>
+              <span class="document-line"></span>
+            </div>
+          </div>
+          <div class="feature-copy">
+            <h3>바로 보낼 수 있는 제안서</h3>
+            <p>테마 색을 반영한 표지와 읽기 편한 본문. 제출과 공유를 고려한 문서예요.</p>
+            <span class="file-name">proposal.docx</span>
+          </div>
+        </article>
+
+        <article class="feature-card" data-reveal>
+          <div class="mockup">
+            <div class="mockup-inner browser-mock" aria-hidden="true">
+              <div class="browser-top"><span></span><span></span><span></span></div>
+              <div class="browser-content">
+                <div class="browser-nav"></div>
+                <div class="browser-title"></div>
+                <div class="browser-subtitle"></div>
+                <div class="browser-subtitle"></div>
+                <div class="browser-cta"></div>
+              </div>
+            </div>
+          </div>
+          <div class="feature-copy">
+            <h3>신청까지 받는 랜딩</h3>
+            <p>유리 질감의 메뉴와 소개 카드로 구성한 웹페이지. 행사 소개와 신청 동선을 설계해요.</p>
+            <span class="file-name">webpage.html</span>
+          </div>
+        </article>
+
+        <article class="feature-card" data-reveal>
+          <div class="mockup">
+            <div class="mockup-inner budget-mock" aria-hidden="true">
+              <span class="budget-label">TOTAL PROJECT BUDGET</span>
+              <strong class="budget-value">₩12,400,000</strong>
+              <div class="chart">
+                <span style="--h: 35%"></span>
+                <span style="--h: 60%"></span>
+                <span style="--h: 48%"></span>
+                <span style="--h: 82%"></span>
+                <span style="--h: 100%"></span>
+                <span style="--h: 72%"></span>
+              </div>
+            </div>
+          </div>
+          <div class="feature-copy">
+            <h3>숫자가 맞는 예산</h3>
+            <p>항목별 비용과 시각화 차트, 수식으로 계산하는 합계까지. 예산의 기준을 명확히 해요.</p>
+            <span class="file-name">budget_analysis.xlsx</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 팀 작동 방식 -->
+    <section class="how-section container" id="how">
+      <header class="section-heading" data-reveal>
+        <p class="eyebrow">How the team works.</p>
+        <h2>팀장 하나, 전문가 다섯,<br>매뉴얼 일곱.</h2>
+        <p>각 에이전트가 따로 움직이지만, 모든 결과물은 하나의 기획과 디자인 규칙을 공유합니다.</p>
+      </header>
+
       <div class="how-grid">
-        <div class="orbit-wrap" data-reveal><div class="orbit"><div class="orbit-ring"><span class="agent" style="--a:0deg"><b>ppt-agent</b></span><span class="agent" style="--a:72deg"><b>poster-agent</b></span><span class="agent" style="--a:144deg"><b>proposal-agent</b></span><span class="agent" style="--a:216deg"><b>webpage-agent</b></span><span class="agent" style="--a:288deg"><b>budget-agent</b></span></div><div class="leader glass">팀장</div></div></div>
+        <div class="orbit-card" data-reveal>
+          <div class="orbit" aria-label="팀장을 중심으로 다섯 전문가가 협업합니다.">
+            <div class="orbit-ring">
+              <span class="agent" style="--a:0deg"><b>ppt-agent</b></span>
+              <span class="agent" style="--a:72deg"><b>poster-agent</b></span>
+              <span class="agent" style="--a:144deg"><b>proposal-agent</b></span>
+              <span class="agent" style="--a:216deg"><b>webpage-agent</b></span>
+              <span class="agent" style="--a:288deg"><b>budget-agent</b></span>
+            </div>
+            <div class="leader">팀장</div>
+          </div>
+        </div>
+
         <div class="steps">
-          <article class="step" data-reveal><div class="step-num">01</div><div><h3>브리프</h3><p>요청을 한 장짜리 기획서로 정리하고 컬러 테마를 정해요.</p></div></article>
-          <article class="step" data-reveal><div class="step-num">02</div><div><h3>예산 먼저</h3><p>budget-agent가 예산 기준표로 모든 금액의 기준을 잡아요.</p></div></article>
-          <article class="step" data-reveal><div class="step-num">03</div><div><h3>원고</h3><p>전문가들이 같은 브리프로 각자 원고를 써요.</p></div></article>
-          <article class="step" data-reveal><div class="step-num">04</div><div><h3>파일 5개</h3><p>디자인 규칙에 맞춰 파일을 만들어 한 번에 첨부해요.</p></div></article>
+          <article class="step" data-reveal>
+            <div class="step-number">01</div>
+            <div>
+              <h3>브리프</h3>
+              <p>요청을 한 장짜리 기획서로 정리하고 전체 결과물에 사용할 컬러 테마를 정해요.</p>
+            </div>
+          </article>
+
+          <article class="step" data-reveal>
+            <div class="step-number">02</div>
+            <div>
+              <h3>예산 먼저</h3>
+              <p>budget-agent가 예산 기준표를 만들고 모든 금액의 기준을 잡아요.</p>
+            </div>
+          </article>
+
+          <article class="step" data-reveal>
+            <div class="step-number">03</div>
+            <div>
+              <h3>원고</h3>
+              <p>전문가들이 동일한 브리프를 바탕으로 각자의 분야에 맞는 원고를 작성해요.</p>
+            </div>
+          </article>
+
+          <article class="step" data-reveal>
+            <div class="step-number">04</div>
+            <div>
+              <h3>파일 5개</h3>
+              <p>공통 디자인 규칙에 맞춰 다섯 가지 파일을 제작하고 한 번에 첨부해요.</p>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="design-band" id="design">
-      <div class="wrap">
-        <header class="section-head" data-reveal><p class="eyebrow serif">One design language.</p><h2 class="section-title">다섯 파일, 하나의<br>리퀴드 글래스.</h2><p class="section-copy">재질과 레이아웃은 늘 같고, 색만 주제에 맞게 바뀝니다.</p></header>
+    <!-- 컬러 테마 -->
+    <section class="design-section" id="design">
+      <div class="container">
+        <header class="section-heading" data-reveal>
+          <p class="eyebrow">One design language.</p>
+          <h2>다섯 파일, 하나의<br>리퀴드 글래스.</h2>
+          <p>재질과 레이아웃은 늘 같고, 색만 주제에 맞게 바뀝니다.</p>
+        </header>
+
         <div class="theme-grid">
-          <article class="theme-card" data-reveal><div class="swatches"><span class="swatch" style="background:#A8D8FF"></span><span class="swatch" style="background:#007AFF"></span></div><h3>스카이</h3><p>교육 · 일반 행사</p></article>
-          <article class="theme-card" data-reveal><div class="swatches"><span class="swatch" style="background:#1EC8FF"></span><span class="swatch" style="background:#FF2E93"></span></div><h3>팝</h3><p>IT 캠페인 · 축제</p></article>
-          <article class="theme-card" data-reveal><div class="swatches"><span class="swatch" style="background:#0B1628"></span><span class="swatch" style="background:#6EA8FF"></span></div><h3>네이비</h3><p>공공 보고서 · 정책</p></article>
-          <article class="theme-card" data-reveal><div class="swatches"><span class="swatch" style="background:#A8E3C4"></span><span class="swatch" style="background:#12A150"></span></div><h3>그린</h3><p>환경 · ESG</p></article>
-          <article class="theme-card" data-reveal><div class="swatches"><span class="swatch" style="background:#FFC2B3"></span><span class="swatch" style="background:#FF6B4A"></span></div><h3>코럴</h3><p>가족 · 복지</p></article>
+          <article class="theme-card" data-reveal>
+            <div class="theme-swatches">
+              <span class="swatch" style="background:#A8D8FF"></span>
+              <span class="swatch" style="background:#007AFF"></span>
+            </div>
+            <h3>스카이</h3>
+            <p>#A8D8FF · #007AFF<br>교육 · 일반 행사</p>
+          </article>
+
+          <article class="theme-card" data-reveal>
+            <div class="theme-swatches">
+              <span class="swatch" style="background:#1EC8FF"></span>
+              <span class="swatch" style="background:#FF2E93"></span>
+            </div>
+            <h3>팝</h3>
+            <p>#1EC8FF · #FF2E93<br>IT 캠페인 · 축제</p>
+          </article>
+
+          <article class="theme-card" data-reveal>
+            <div class="theme-swatches">
+              <span class="swatch" style="background:#0B1628"></span>
+              <span class="swatch" style="background:#6EA8FF"></span>
+            </div>
+            <h3>네이비</h3>
+            <p>#0B1628 · #6EA8FF<br>공공 보고서 · 정책</p>
+          </article>
+
+          <article class="theme-card" data-reveal>
+            <div class="theme-swatches">
+              <span class="swatch" style="background:#A8E3C4"></span>
+              <span class="swatch" style="background:#12A150"></span>
+            </div>
+            <h3>그린</h3>
+            <p>#A8E3C4 · #12A150<br>환경 · ESG</p>
+          </article>
+
+          <article class="theme-card" data-reveal>
+            <div class="theme-swatches">
+              <span class="swatch" style="background:#FFC2B3"></span>
+              <span class="swatch" style="background:#FF6B4A"></span>
+            </div>
+            <h3>코럴</h3>
+            <p>#FFC2B3 · #FF6B4A<br>가족 · 복지</p>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="prompts">
-      <header class="section-head" data-reveal><p class="eyebrow serif">Ready prompts.</p><h2 class="section-title">이런 요청에 강해요</h2><p class="section-copy">칩을 누르면 문장이 대화창에 채워져요. 마음에 들면 바로 보내 보세요.</p></header>
-      <div class="prompts" aria-label="추천 요청 예시"><div class="marquee-track"><button class="prompt-chip" data-fill="가을 학교 축제 기획해 줘">가을 학교 축제</button><button class="prompt-chip" data-fill="탄소중립 캠페인 기획해 줘">탄소중립 캠페인</button><button class="prompt-chip" data-fill="교사 AI 연수 프로그램 기획해 줘">교사 AI 연수</button><button class="prompt-chip" data-fill="신제품 런칭 행사 기획해 줘">신제품 런칭 행사</button><button class="prompt-chip" data-fill="진로 체험 주간 기획해 줘">진로 체험 주간</button><button class="prompt-chip" data-fill="지역 축제 홍보 기획해 줘">지역 축제 홍보</button><button class="prompt-chip" data-fill="고객 제안 워크숍 기획해 줘">고객 제안 워크숍</button><button class="prompt-chip" data-fill="학부모 설명회 기획해 줘">학부모 설명회</button><button class="prompt-chip" data-fill="해커톤 기획해 줘">해커톤</button><button class="prompt-chip" data-fill="동아리 박람회 기획해 줘">동아리 박람회</button><button class="prompt-chip" data-fill="가을 학교 축제 기획해 줘">가을 학교 축제</button><button class="prompt-chip" data-fill="탄소중립 캠페인 기획해 줘">탄소중립 캠페인</button><button class="prompt-chip" data-fill="교사 AI 연수 프로그램 기획해 줘">교사 AI 연수</button><button class="prompt-chip" data-fill="신제품 런칭 행사 기획해 줘">신제품 런칭 행사</button><button class="prompt-chip" data-fill="진로 체험 주간 기획해 줘">진로 체험 주간</button></div><div class="marquee-track reverse"><button class="prompt-chip" data-fill="지역 축제 홍보 기획해 줘">지역 축제 홍보</button><button class="prompt-chip" data-fill="고객 제안 워크숍 기획해 줘">고객 제안 워크숍</button><button class="prompt-chip" data-fill="학부모 설명회 기획해 줘">학부모 설명회</button><button class="prompt-chip" data-fill="해커톤 기획해 줘">해커톤</button><button class="prompt-chip" data-fill="동아리 박람회 기획해 줘">동아리 박람회</button><button class="prompt-chip" data-fill="가을 학교 축제 기획해 줘">가을 학교 축제</button><button class="prompt-chip" data-fill="탄소중립 캠페인 기획해 줘">탄소중립 캠페인</button><button class="prompt-chip" data-fill="교사 AI 연수 프로그램 기획해 줘">교사 AI 연수</button><button class="prompt-chip" data-fill="신제품 런칭 행사 기획해 줘">신제품 런칭 행사</button><button class="prompt-chip" data-fill="진로 체험 주간 기획해 줘">진로 체험 주간</button><button class="prompt-chip" data-fill="지역 축제 홍보 기획해 줘">지역 축제 홍보</button><button class="prompt-chip" data-fill="고객 제안 워크숍 기획해 줘">고객 제안 워크숍</button></div></div>
+    <!-- 아이디어 예시 -->
+    <section class="prompts-section" id="prompts">
+      <div class="container">
+        <header class="section-heading" data-reveal>
+          <p class="eyebrow">Ready prompts.</p>
+          <h2>이런 요청에 강해요</h2>
+          <p>마음에 드는 주제를 누르면 채팅창에 요청이 채워져요. 세부 내용은 자유롭게 바꿔 보세요.</p>
+        </header>
+      </div>
+
+      <div class="marquee-window" aria-label="기획 아이디어 예시">
+        <div class="marquee-track">
+          <button class="prompt-chip" type="button" data-prompt="가을 학교 축제 기획해 줘"><span>✳</span> 가을 학교 축제</button>
+          <button class="prompt-chip" type="button" data-prompt="탄소중립 캠페인 홍보물 만들어 줘"><span>✳</span> 탄소중립 캠페인</button>
+          <button class="prompt-chip" type="button" data-prompt="교사 AI 연수 프로그램 제안해 줘"><span>✳</span> 교사 AI 연수</button>
+          <button class="prompt-chip" type="button" data-prompt="신제품 런칭 행사 기획해 줘"><span>✳</span> 신제품 런칭 행사</button>
+          <button class="prompt-chip" type="button" data-prompt="진로 체험 주간 기획해 줘"><span>✳</span> 진로 체험 주간</button>
+          <button class="prompt-chip" type="button" data-prompt="지역 축제 홍보 기획해 줘"><span>✳</span> 지역 축제 홍보</button>
+          <button class="prompt-chip" type="button" data-prompt="고객 제안 워크숍 기획해 줘"><span>✳</span> 고객 제안 워크숍</button>
+          <button class="prompt-chip" type="button" data-prompt="학부모 설명회 기획해 줘"><span>✳</span> 학부모 설명회</button>
+          <button class="prompt-chip" type="button" data-prompt="해커톤 기획해 줘"><span>✳</span> 해커톤</button>
+          <button class="prompt-chip" type="button" data-prompt="동아리 박람회 기획해 줘"><span>✳</span> 동아리 박람회</button>
+        </div>
+
+        <div class="marquee-track reverse" aria-hidden="true">
+          <button class="prompt-chip" type="button" tabindex="-1" data-prompt="학교 축제 홍보 기획해 줘"><span>✳</span> 학교 축제 홍보</button>
+          <button class="prompt-chip" type="button" tabindex="-1" data-prompt="환경 보호 캠페인 기획해 줘"><span>✳</span> 환경 보호 캠페인</button>
+          <button class="prompt-chip" type="button" tabindex="-1" data-prompt="학생 대상 AI 교육 프로그램 제안해 줘"><span>✳</span> AI 교육 프로그램</button>
+          <button class="prompt-chip" type="button" tabindex="-1" data-prompt="지역 문화 행사 기획해 줘"><span>✳</span> 지역 문화 행사</button>
+          <button class="prompt-chip" type="button" tabindex="-1" data-prompt="청소년 진로 박람회 기획해 줘"><span>✳</span> 청소년 진로 박람회</button>
+          <button class="prompt-chip" type="button" tabindex="-1" data-prompt="동아리 발표회 기획해 줘"><span>✳</span> 동아리 발표회</button>
+          <button class="prompt-chip" type="button" tabindex="-1" data-prompt="학교 해커톤 행사 기획해 줘"><span>✳</span> 학교 해커톤</button>
+          <button class="prompt-chip" type="button" tabindex="-1" data-prompt="학부모 대상 설명회 기획해 줘"><span>✳</span> 학부모 설명회</button>
+          <button class="prompt-chip" type="button" tabindex="-1" data-prompt="IT 캠페인 행사 기획해 줘"><span>✳</span> IT 캠페인</button>
+          <button class="prompt-chip" type="button" tabindex="-1" data-prompt="청소년 동아리 박람회 기획해 줘"><span>✳</span> 동아리 박람회</button>
+        </div>
+      </div>
     </section>
 
-    <section class="cta-panel mesh" data-reveal><p class="eyebrow serif">Your turn.</p><h2>지금, 아이디어 한 줄을<br><span class="gradient-text">적어 보세요.</span></h2><button class="pill pill-dark" type="button" data-chat-jump>대화 시작하기 <span aria-hidden="true">↑</span></button></section>
+    <!-- 마지막 CTA -->
+    <section class="cta mesh">
+      <div class="cta-inner" data-reveal>
+        <p class="eyebrow">Your turn.</p>
+        <h2>지금, 아이디어 한 줄을<br><span class="gradient-text">적어 보세요.</span></h2>
+        <button class="pill-button" type="button" data-chat-jump>
+          대화 시작하기 <span aria-hidden="true">↑</span>
+        </button>
+      </div>
+    </section>
   </main>
-  <footer class="footer wrap"><div><strong>AI Creative Agent Team</strong> · Copilot Studio로 만든 멀티 에이전트</div><div>© 2026</div></footer>
-  <button class="floating-status glass" id="floating-status" type="button" data-chat-jump aria-live="polite">팀이 작업 중 · 0:00</button>
 
-  <script src="https://cdn.botframework.com/botframework-webchat/4.18.0/webchat.js"></script>
+  <footer class="footer container">
+    <div class="footer-brand">AI Creative Agent Team</div>
+    <div>Copilot Studio로 만든 멀티 에이전트</div>
+    <div>© 2026</div>
+  </footer>
+
+  <!-- 대화창 밖에서 표시되는 작업 알림 -->
+  <button class="floating-status" id="floating-status" type="button" data-chat-jump aria-live="polite">
+    <span class="status-dot" aria-hidden="true"></span>
+    <span id="floating-label">팀이 작업 중 · 0:00</span>
+    <span aria-hidden="true">↑</span>
+  </button>
+
   <script>
-    // ① 등장 효과, 숫자, 페이지 이동
+    /* 1. 등장 효과, 숫자, 페이지 이동 */
+
     const body = document.body;
-    const chatCard = document.querySelector('.chat-card');
-    const input = document.getElementById('message-input');
-    const sendButton = document.getElementById('send-btn');
-    const composer = document.getElementById('composer');
-    const connectionLabel = document.getElementById('connection-label');
-    const errorRaw = document.getElementById('error-raw');
-    const floatingStatus = document.getElementById('floating-status');
-    const webchatRoot = document.getElementById('webchat');
+    const chatCard = document.getElementById("chat-card");
+    const messageInput = document.getElementById("message-input");
+    const sendButton = document.getElementById("send-button");
+    const composer = document.getElementById("composer");
+    const webchatElement = document.getElementById("webchat");
+    const chatLoading = document.getElementById("chat-loading");
+    const connectionLabel = document.getElementById("connection-label");
+    const connectionError = document.getElementById("connection-error");
+    const errorTitle = document.getElementById("error-title");
+    const errorDetail = document.getElementById("error-detail");
+    const suggestedActions = document.getElementById("suggested-actions");
+    const workLabel = document.getElementById("work-label");
+    const workTime = document.getElementById("work-time");
+    const floatingLabel = document.getElementById("floating-label");
+
+    let connected = false;
     let directLine = null;
     let store = null;
-    let connected = false;
     let workingSince = 0;
-    let workingInterval = null;
-    let hasResult = false;
+    let workInterval = null;
+    let longWaitTimeout = null;
     let connectionAttempt = 0;
+    let lastActivityTime = 0;
 
+    // 연결 코드에서 사용하는 값은 원본 그대로 유지
+    const BROKER_URL = "https://dl-broker-juwon-4jt3z.azurewebsites.net/api/directlineToken";
+    const SEALED = "XswHOczHPQEWKfXa-1FWg4hevmYxqKljxb44Omm8DmBBLoiKdqZxHhyC9ti51KrDWbEE5Qh6iN1bqNGgmZ99027boMIs5ZQednB-CTS4BpKB13Pz-hqvRRN7w3dB9z7-2QHBDjhAQXcZujqMS-IT12PlYvQ-WB57IyIqmg3AwWG2gtvnVHrJV9lV7ysQCY0N-TQol8_gaGb4d8f0ks953tKcSJvQdp18JI9DtVC25F0i3UItxrHAhJnXmFzCqx0ACbS4BxWza75Ibdlr9wB1hd6zxTc2gKVuQ2NZ4BjqXCOVELo1ify6Dj4N08nUMUokUYOFm2y2LPrcEXKmb1jYRS2rgr1LWcIz-nCMi3kL1jPevxdXx2BMay7nIMPpm1fz_Q2QTEJVQgf7xNT_UFO8GbyLk0odPeZWx8BSEoVt6mus7xkcsQHfKsQE9vmE1U-YYoIWtHb7-0YVErfFfOaDE4-Q9Qyas6cwe7PGQev3O4jKQrCX-6mvAX7G_5JM4dURFzecfF8891Owgshz8N2m6jTPs5IJm_YZhiKS9Pn1sMwV4Eu1mzAvmRPIFZBHbwHQ_cbFMenjkV8IgA80wI8e-_GZHeXgvQmVopdpCLrnz3LPRHvhfQkNjSfBvxM843fDLOVhM1dOpkDY_UHoB4fLlA";
+
+    // 대화창으로 이동하는 공통 함수
     function jumpToChat(focusInput = true) {
-      window.scrollTo({ top: chatCard.getBoundingClientRect().top + window.scrollY - 88, behavior: 'smooth' });
-      if (focusInput) setTimeout(() => input.focus({ preventScroll: true }), 420);
-    }
-    document.querySelectorAll('[data-chat-jump]').forEach(button => button.addEventListener('click', () => jumpToChat(true)));
+      const top = chatCard.getBoundingClientRect().top + window.scrollY - 88;
 
-    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      body.classList.add('reveal-ready');
-      document.querySelectorAll('[data-reveal]').forEach((el, index) => { el.style.transitionDelay = `${(index % 5) * 80}ms`; });
-      const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => {
-        if (entry.isIntersecting) { entry.target.classList.add('revealed'); revealObserver.unobserve(entry.target); }
-      }), { threshold: .12 });
-      document.querySelectorAll('[data-reveal]').forEach(el => revealObserver.observe(el));
-    }
-    const countObserver = new IntersectionObserver(entries => entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const node = entry.target, goal = Number(node.dataset.count), start = performance.now(), duration = 850;
-      function tick(now) { const t = Math.min(1, (now - start) / duration); node.textContent = Math.round(goal * (1 - Math.pow(1 - t, 3))); if (t < 1) requestAnimationFrame(tick); }
-      requestAnimationFrame(tick); countObserver.unobserve(node);
-    }), { threshold: .5 });
-    document.querySelectorAll('[data-count]').forEach(el => countObserver.observe(el));
+      window.scrollTo({
+        top,
+        behavior: "smooth"
+      });
 
-    function resizeInput() { input.style.height = 'auto'; input.style.height = `${Math.min(input.scrollHeight, 150)}px`; }
-    input.addEventListener('input', () => { resizeInput(); sendButton.disabled = !connected || !input.value.trim(); });
-    input.addEventListener('keydown', event => {
-      if (event.key === 'Enter' && !event.shiftKey && !event.isComposing && event.keyCode !== 229) { event.preventDefault(); composer.requestSubmit(); }
+      if (focusInput) {
+        window.setTimeout(() => {
+          if (connected && !body.classList.contains("is-error")) {
+            messageInput.focus({ preventScroll: true });
+          }
+        }, 450);
+      }
+    }
+
+    document.querySelectorAll("[data-chat-jump]").forEach(button => {
+      button.addEventListener("click", () => jumpToChat());
     });
 
-    // ② 대화창 상태와 메시지 전송
-    function setWorking(active) {
-      if (active) {
-        body.classList.add('is-working'); body.classList.remove('has-result'); hasResult = false;
-        workingSince = Date.now(); updateWorkingLabel();
-        clearInterval(workingInterval); workingInterval = setInterval(updateWorkingLabel, 1000);
-      } else {
-        body.classList.remove('is-working'); clearInterval(workingInterval); workingInterval = null;
-      }
-      updateFloatingLabel();
-    }
-    function updateWorkingLabel() {
-      if (!workingSince) return;
-      const seconds = Math.floor((Date.now() - workingSince) / 1000);
-      const time = `${Math.floor(seconds / 60)}:${String(seconds % 60).padStart(2, '0')}`;
-      document.getElementById('working-label').textContent = `팀이 작업 중 · ${time}`;
-      document.getElementById('working-note').textContent = seconds >= 20 ? '파일 5개를 만드느라 몇 분 걸릴 수 있어요' : '';
-      updateFloatingLabel();
-    }
-    function updateFloatingLabel() {
-      if (body.classList.contains('is-working')) floatingStatus.textContent = document.getElementById('working-label').textContent;
-      else if (hasResult) floatingStatus.textContent = '결과가 도착했어요 ↑';
-    }
-    function sendMessage(text) {
-      const value = String(text || '').trim();
-      if (!connected || !store || !value) return;
-      body.classList.add('is-started');
-      document.getElementById('example-row').hidden = true;
-      document.getElementById('suggested-row').replaceChildren();
-      setWorking(true);
-      store.dispatch({ type: 'WEB_CHAT/SEND_MESSAGE', payload: { text: value } });
-      input.value = ''; resizeInput(); sendButton.disabled = true;
-      jumpToChat(false);
-    }
-    composer.addEventListener('submit', event => { event.preventDefault(); sendMessage(input.value); });
-    document.querySelectorAll('[data-send]').forEach(button => button.addEventListener('click', () => sendMessage(button.dataset.send)));
-    document.querySelectorAll('[data-fill]').forEach(button => button.addEventListener('click', () => {
-      input.value = `${button.dataset.fill}`; resizeInput(); sendButton.disabled = !connected; jumpToChat(true);
-    }));
-    document.getElementById('new-chat').addEventListener('click', () => window.location.reload());
-    document.getElementById('retry').addEventListener('click', connect);
+    // 섹션 등장 효과
+    body.classList.add("js-reveal");
 
-    // ③ 원래 Direct Line 연결 흐름
-    const BROKER_URL = "https://dl-broker-juwon-4jt3z.azurewebsites.net/api/directlineToken";
-    const SEALED = "Rc3Pcp2yRrAvUQ2NGnLcRwybjVU1SvS41e-GTHuTFnPf94r284ykyPjkBsLzkBlic4rjt21XgSpnqN28LOEiGjqAi1ELSFp_SjCN8Gfe5ywvI7f_8fn-ORjnB3xtEPBcXerhDR521O9T86nqx7UgQdFnPmbvAPcJIg6hZPkuEt3wUbNT5HOSC_2EoK6-SX5wfk7fJpiPIuXMO3Z8gbTdY6tCHmBLdgJ27i0DXY_VDkOJ9HHsO5ritq39q9avNy6VAFcJiYoc9c273QSwhwMpDrwnZ4_RxNkMTWzOX69h2eu8bHNSJ7ILis5xLeQsXneACloV9ScXOJyw3uw0JciDQlkBqGlcdzHQKViSHXlNebspK_3TgpDSpsdfo9N4bXxH4PqavBc39dLflbLNvoKYQazRK5GtGTVNA78p7jzs332Pwfd_8YFhVBd470Y5yYRvx5xdSXS9QLcwDoTf3_e803iBZ2sbYe3tziBQJbzIBXt0eaidh2uzp-0tnDyM67WvI9bERwOkgtgioT8GoAGFvJNKNuZuS34KosWWg7R_KfWoq8_59Rbd0wUSL3O1-IjDldR2K-5vv8SkSvBhxjdHuUhcl_dXohmyWcINWoJHf1ZDP8581s95N6sJ0LwK2otZJIEF8rT57tDm27-MULS1C7kWOAmKBw";
+    document.querySelectorAll("[data-reveal]").forEach((element, index) => {
+      element.style.setProperty("--delay", `${(index % 5) * 80}ms`);
+    });
 
-    function showError(message) {
-      body.classList.add('is-error'); body.classList.remove('is-connected');
-      connected = false; input.disabled = true; sendButton.disabled = true;
-      connectionLabel.textContent = '연결 오류';
-      document.getElementById('connect-error').style.display = 'block';
-      document.getElementById('error-raw').textContent = message || '알 수 없는 연결 오류';
+    if ("IntersectionObserver" in window) {
+      const revealObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+
+          entry.target.classList.add("revealed");
+          revealObserver.unobserve(entry.target);
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: "0px 0px -25px 0px"
+      });
+
+      document.querySelectorAll("[data-reveal]").forEach(element => {
+        revealObserver.observe(element);
+      });
+    } else {
+      document.querySelectorAll("[data-reveal]").forEach(element => {
+        element.classList.add("revealed");
+      });
     }
-    async function connect() {
-      const attempt = ++connectionAttempt;
-      body.classList.remove('is-error', 'is-connected');
-      connected = false; input.disabled = true; sendButton.disabled = true;
-      connectionLabel.textContent = '팀을 부르는 중…';
-      document.getElementById('connect-error').style.display = 'none';
-      if (!window.WebChat || typeof WebChat.createDirectLine !== 'function' || typeof WebChat.renderWebChat !== 'function') {
-        showError('채팅 구성 요소를 불러오지 못했습니다. 네트워크를 확인한 뒤 새로고침해 주세요.'); return;
-      }
-      let response;
-      try {
-        response = await fetch(BROKER_URL, { method: 'POST', body: JSON.stringify({ sealed: SEALED }) });
-      } catch (error) {
-        if (attempt === connectionAttempt) showError(error && error.message ? error.message : '서버에 연결하지 못했습니다. 네트워크와 배포 주소를 확인해 주세요.');
+
+    // 숫자는 해당 요소가 화면에 들어올 때 한 번만 증가
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    function animateCounter(element) {
+      const target = Number(element.dataset.count);
+
+      if (reducedMotion) {
+        element.textContent = target;
         return;
       }
-      if (attempt !== connectionAttempt) return;
-      if (!response.ok) { showError(`서버가 연결 요청을 처리하지 못했습니다 (HTTP ${response.status}).`); return; }
-      let data;
-      try { data = await response.json(); } catch (error) { showError(error && error.message ? error.message : '서버 응답을 읽을 수 없습니다.'); return; }
-      if (!data || typeof data.token !== 'string' || !data.token.trim()) { showError('서버에서 연결 토큰을 받지 못했습니다. 암호와 배포 주소를 확인해 주세요.'); return; }
-      try {
-        directLine = WebChat.createDirectLine({ token: data.token });
-        store = WebChat.createStore({}, ({ dispatch }) => next => action => {
-          if (action.type === 'DIRECT_LINE/CONNECT_FULFILLED') {
-            body.classList.add('is-connected'); body.classList.remove('is-error'); connected = true;
-            input.disabled = false; sendButton.disabled = !input.value.trim(); connectionLabel.textContent = '연결됨';
-          }
-          if (action.type === 'DIRECT_LINE/INCOMING_ACTIVITY') {
-            const activity = action.payload && action.payload.activity;
-            if (activity && activity.from && activity.from.role !== 'user') {
-              if (activity.type === 'message') {
-                setWorking(false); workingSince = 0; hasResult = true; body.classList.add('has-result'); updateFloatingLabel();
-              }
-              if (Array.isArray(activity.suggestedActions && activity.suggestedActions.actions)) {
-                const row = document.getElementById('suggested-row'); row.replaceChildren();
-                activity.suggestedActions.actions.forEach(actionItem => {
-                  const button = document.createElement('button'); button.type = 'button'; button.className = 'suggest-chip'; button.textContent = actionItem.title || actionItem.value || '선택';
-                  button.addEventListener('click', () => {
-                    if (actionItem.type === 'openUrl' && actionItem.value) window.open(actionItem.value, '_blank', 'noopener,noreferrer');
-                    else if (actionItem.value) sendMessage(actionItem.value);
-                  }); row.appendChild(button);
-                });
-              }
-            }
-          }
-          return next(action);
-        });
-        WebChat.renderWebChat({ directLine, store, locale: 'ko-KR', styleOptions: {
-          hideSendBox: true, rootHeight: '100%', backgroundColor: 'transparent', primaryFont: "'Pretendard Variable', -apple-system, sans-serif", bubbleBackground: 'transparent', bubbleBorderWidth: 0, bubbleMaxWidth: 720, bubbleMinWidth: 0, bubbleFromUserBackground: 'linear-gradient(135deg, #EEF0FF, #FBEFFF)', bubbleFromUserBorderWidth: 0, bubbleFromUserBorderRadius: 20
-        } }, webchatRoot);
-        directLine.postActivity({ type: 'event', name: 'startConversation', from: { id: 'user' } }).subscribe({ error: error => showError(error && error.message ? error.message : '첫 인사를 요청하지 못했습니다. 채팅창에 메시지를 입력해 주세요.') });
-      } catch (error) { showError(error && error.message ? error.message : '채팅을 시작하지 못했습니다. 새로고침 후 다시 시도해 주세요.'); }
+
+      const duration = 1000;
+      const start = performance.now();
+
+      function update(now) {
+        const progress = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - progress, 4);
+
+        element.textContent = Math.round(target * eased);
+
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          element.textContent = target;
+        }
+      }
+
+      requestAnimationFrame(update);
     }
 
-    // 작업 중일 때 대화창이 화면 밖이면 상태 알약을 표시
-    const chatVisibility = new IntersectionObserver(entries => {
-      const visible = entries[0].isIntersecting;
-      floatingStatus.style.display = (!visible && (body.classList.contains('is-working') || hasResult)) ? 'flex' : '';
-    }, { threshold: .15 });
-    chatVisibility.observe(chatCard);
+    if ("IntersectionObserver" in window) {
+      const counterObserver = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        });
+      }, { threshold: 0.5 });
+
+      document.querySelectorAll("[data-count]").forEach(element => {
+        counterObserver.observe(element);
+      });
+    } else {
+      document.querySelectorAll("[data-count]").forEach(animateCounter);
+    }
+
+    // 추천 주제는 메시지를 자동 전송하지 않고 입력창만 채움
+    document.querySelectorAll("[data-prompt]").forEach(button => {
+      button.addEventListener("click", () => {
+        const prompt = button.dataset.prompt || "";
+
+        if (!connected || body.classList.contains("is-error")) {
+          jumpToChat(false);
+          return;
+        }
+
+        messageInput.value = prompt;
+        resizeInput();
+        updateSendButton();
+        jumpToChat();
+
+        window.setTimeout(() => {
+          messageInput.focus({ preventScroll: true });
+        }, 450);
+      });
+    });
+
+    /* 2. 대화창 동작 */
+
+    function updateSendButton() {
+      sendButton.disabled = !connected ||
+        !messageInput.value.trim() ||
+        body.classList.contains("is-error");
+    }
+
+    function resizeInput() {
+      messageInput.style.height = "auto";
+      messageInput.style.height =
+        Math.min(messageInput.scrollHeight, 144) + "px";
+    }
+
+    function formatElapsed(milliseconds) {
+      const seconds = Math.floor(milliseconds / 1000);
+      const minutes = Math.floor(seconds / 60);
+      return `${minutes}:${String(seconds % 60).padStart(2, "0")}`;
+    }
+
+    function startWorking() {
+      workingSince = Date.now();
+
+      body.classList.add("is-working");
+      body.classList.remove("is-result");
+      body.classList.remove("is-waiting-long");
+
+      workLabel.textContent = "팀이 작업 중";
+
+      clearInterval(workInterval);
+      clearTimeout(longWaitTimeout);
+
+      const updateTime = () => {
+        const elapsed = Date.now() - workingSince;
+        const formatted = formatElapsed(elapsed);
+
+        workTime.textContent = formatted;
+        floatingLabel.textContent = `팀이 작업 중 · ${formatted}`;
+      };
+
+      updateTime();
+
+      workInterval = window.setInterval(updateTime, 1000);
+
+      longWaitTimeout = window.setTimeout(() => {
+        if (body.classList.contains("is-working")) {
+          body.classList.add("is-waiting-long");
+        }
+      }, 20000);
+    }
+
+    function stopWorking() {
+      body.classList.remove("is-working", "is-waiting-long");
+      clearInterval(workInterval);
+      clearTimeout(longWaitTimeout);
+    }
+
+    function showResultNotification() {
+      body.classList.add("is-result");
+      floatingLabel.textContent = "결과가 도착했어요";
+    }
+
+    function clearResultNotification() {
+      body.classList.remove("is-result");
+    }
+
+    function clearSuggestedActions() {
+      suggestedActions.replaceChildren();
+    }
+
+    function renderSuggestedActions(actions) {
+      clearSuggestedActions();
+
+      if (!Array.isArray(actions)) return;
+
+      actions.forEach(action => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.className = "suggestion-chip";
+        button.textContent = action.title || action.value || "선택";
+
+        button.addEventListener("click", () => {
+          if (!connected) return;
+
+          if (action.type === "openUrl" && action.value) {
+            window.open(action.value, "_blank", "noopener,noreferrer");
+            return;
+          }
+
+          const value = action.value || action.title || "";
+
+          if (value) {
+            sendMessage(value);
+          }
+        });
+
+        suggestedActions.appendChild(button);
+      });
+    }
+
+    function setConnected() {
+      connected = true;
+
+      body.classList.add("is-connected");
+      body.classList.remove("is-error");
+
+      chatCard.classList.remove("is-failed");
+      connectionLabel.textContent = "연결됨";
+
+      connectionError.style.display = "";
+      chatLoading.hidden = true;
+      messageInput.disabled = false;
+
+      updateSendButton();
+    }
+
+    function showError(message, title = "지금은 팀과 연결할 수 없어요.") {
+      connected = false;
+
+      body.classList.remove("is-connected");
+      body.classList.add("is-error");
+
+      chatCard.classList.add("is-failed");
+      connectionLabel.textContent = "연결 오류";
+
+      chatLoading.hidden = true;
+      messageInput.disabled = true;
+      sendButton.disabled = true;
+
+      errorTitle.textContent = title;
+      errorDetail.textContent = message || "알 수 없는 오류";
+
+      connectionError.style.display = "block";
+    }
+
+    function resetChatState() {
+      body.classList.remove("is-started", "is-result");
+      stopWorking();
+      clearResultNotification();
+      clearSuggestedActions();
+
+      messageInput.value = "";
+      resizeInput();
+      updateSendButton();
+    }
+
+    // 첫 메시지를 보낼 때만 대화 화면을 확장
+    function markStarted() {
+      if (body.classList.contains("is-started")) return;
+
+      body.classList.add("is-started");
+
+      window.setTimeout(() => {
+        jumpToChat(false);
+      }, 80);
+    }
+
+    function sendMessage(text) {
+      const value = String(text || "").trim();
+
+      if (!value || !connected || !store || body.classList.contains("is-error")) {
+        return;
+      }
+
+      markStarted();
+      clearResultNotification();
+      clearSuggestedActions();
+      startWorking();
+
+      messageInput.value = "";
+      resizeInput();
+      updateSendButton();
+
+      store.dispatch({
+        type: "WEB_CHAT/SEND_MESSAGE",
+        payload: { text: value }
+      });
+    }
+
+    // 예시 버튼은 첫 메시지로 바로 전송
+    document.querySelectorAll("[data-send-example]").forEach(button => {
+      button.addEventListener("click", () => {
+        if (!connected) {
+          jumpToChat(false);
+          return;
+        }
+
+        sendMessage(button.dataset.sendExample);
+      });
+    });
+
+    composer.addEventListener("submit", event => {
+      event.preventDefault();
+      sendMessage(messageInput.value);
+    });
+
+    messageInput.addEventListener("input", () => {
+      resizeInput();
+      updateSendButton();
+    });
+
+    messageInput.addEventListener("keydown", event => {
+      if (event.key !== "Enter" || event.shiftKey) return;
+
+      // 한글 조합 중 Enter는 전송하지 않음
+      if (event.isComposing || event.keyCode === 229) return;
+
+      event.preventDefault();
+
+      if (!sendButton.disabled) {
+        composer.requestSubmit();
+      }
+    });
+
+    document.getElementById("floating-status").addEventListener("click", () => {
+      jumpToChat(false);
+    });
+
+    // 대화창을 벗어난 상태에서만 떠 있는 알림 표시
+    const floatingStatus = document.getElementById("floating-status");
+
+    function updateFloatingStatus() {
+      if (!body.classList.contains("is-started")) return;
+
+      const rect = chatCard.getBoundingClientRect();
+      const outside = rect.bottom < 0 || rect.top > window.innerHeight;
+
+      floatingStatus.style.visibility = outside ? "visible" : "hidden";
+    }
+
+    window.addEventListener("scroll", updateFloatingStatus, { passive: true });
+    window.addEventListener("resize", updateFloatingStatus);
+
+    document.getElementById("reset-chat").addEventListener("click", () => {
+      window.location.reload();
+    });
+
+    document.getElementById("retry-connect").addEventListener("click", () => {
+      connect();
+    });
+
+    /* 3. 기존 Copilot Studio 연결 코드 */
+
+    async function connect() {
+      const attempt = ++connectionAttempt;
+
+      connected = false;
+      body.classList.remove("is-connected", "is-error");
+
+      chatCard.classList.remove("is-failed");
+      connectionLabel.textContent = "연결 중";
+      connectionError.style.display = "";
+      chatLoading.hidden = false;
+      chatLoading.textContent = "팀을 부르는 중…";
+
+      messageInput.disabled = true;
+      sendButton.disabled = true;
+
+      if (!window.WebChat ||
+          typeof WebChat.createDirectLine !== "function" ||
+          typeof WebChat.renderWebChat !== "function") {
+        showError(
+          "Web Chat 4.18.0을 불러오지 못했습니다. 네트워크를 확인해 주세요.",
+          "채팅 구성 요소를 불러오지 못했어요."
+        );
+        return;
+      }
+
+      let response;
+
+      try {
+        // 원래 연결 방식 유지: headers를 추가하지 않음
+        response = await fetch(BROKER_URL, {
+          method: "POST",
+          body: JSON.stringify({ sealed: SEALED })
+        });
+      } catch (error) {
+        if (attempt !== connectionAttempt) return;
+
+        showError(
+          error && error.message ? error.message : "네트워크 요청 실패",
+          "서버에 연결하지 못했어요."
+        );
+        return;
+      }
+
+      if (attempt !== connectionAttempt) return;
+
+      if (!response.ok) {
+        showError(
+          `HTTP ${response.status}`,
+          "서버가 연결 요청을 처리하지 못했어요."
+        );
+        return;
+      }
+
+      let data;
+
+      try {
+        data = await response.json();
+      } catch (error) {
+        if (attempt !== connectionAttempt) return;
+
+        showError(
+          error && error.message ? error.message : "응답 JSON 파싱 실패",
+          "서버 응답을 읽을 수 없어요."
+        );
+        return;
+      }
+
+      if (attempt !== connectionAttempt) return;
+
+      if (!data || typeof data.token !== "string" || !data.token.trim()) {
+        showError(
+          "서버 응답에 유효한 token이 없습니다.",
+          "연결 토큰을 받지 못했어요."
+        );
+        return;
+      }
+
+      try {
+        resetChatState();
+
+        const nextDirectLine = WebChat.createDirectLine({
+          token: data.token
+        });
+
+        directLine = nextDirectLine;
+
+        // Web Chat의 연결 및 수신 이벤트를 감시
+        store = WebChat.createStore({}, ({ dispatch }) => next => action => {
+          const result = next(action);
+
+          if (action.type === "DIRECT_LINE/CONNECT_FULFILLED") {
+            setConnected();
+          }
+
+          if (action.type === "DIRECT_LINE/INCOMING_ACTIVITY") {
+            const activity = action.payload && action.payload.activity;
+
+            if (activity && activity.from && activity.from.role !== "user") {
+              lastActivityTime = Date.now();
+
+              if (activity.type === "message") {
+                stopWorking();
+                clearResultNotification();
+                body.classList.add("is-result");
+
+                // 새 결과가 도착했을 때 화면 밖이면 알림 표시
+                const rect = chatCard.getBoundingClientRect();
+                if (rect.bottom < 0 || rect.top > window.innerHeight) {
+                  showResultNotification();
+                }
+
+                if (Array.isArray(activity.suggestedActions?.actions)) {
+                  renderSuggestedActions(activity.suggestedActions.actions);
+                }
+              }
+
+              // 타이핑 활동만으로 작업 상태를 종료하지 않음
+            }
+          }
+
+          if (action.type === "DIRECT_LINE/POST_ACTIVITY_FULFILLED") {
+            // 메시지 전송 확인은 작업 종료 신호가 아님
+          }
+
+          return result;
+        });
+
+        WebChat.renderWebChat({
+          directLine,
+          store,
+          locale: "ko-KR",
+          styleOptions: {
+            hideSendBox: true,
+            rootHeight: "100%",
+            backgroundColor: "transparent",
+            primaryFont: "'Pretendard Variable', -apple-system, sans-serif",
+            bubbleBackground: "transparent",
+            bubbleBorderWidth: 0,
+            bubbleMaxWidth: 720,
+            bubbleMinWidth: 0,
+            bubbleFromUserBackground: "linear-gradient(135deg, #EEF0FF, #FBEFFF)",
+            bubbleFromUserBorderWidth: 0,
+            bubbleFromUserBorderRadius: 20
+          }
+        }, webchatElement);
+
+        // 원본 연결 흐름 유지
+        directLine.postActivity({
+          type: "event",
+          name: "startConversation",
+          from: { id: "user" }
+        }).subscribe({
+          error: error => {
+            if (attempt !== connectionAttempt) return;
+
+            console.error("startConversation 오류:", error);
+          }
+        });
+
+      } catch (error) {
+        if (attempt !== connectionAttempt) return;
+
+        console.error("Web Chat 초기화 오류:", error);
+
+        showError(
+          error && error.message ? error.message : "Web Chat 초기화 실패",
+          "채팅을 시작하지 못했어요."
+        );
+      }
+    }
+
+    // 처음에는 히어로 안의 작은 채팅창으로 시작
     connect();
   </script>
 </body>
